@@ -1,3 +1,11 @@
 bin/
 obj/
 project.lock.json
+
+*.aux
+*.log
+*.nav
+*.out
+*.pdf
+*.snm
+*.toc
