@@ -1,9 +1,12 @@
-interface Rectangle {
+interface GeometricRectangle { 
     calculateArea(): number;
+}
+
+interface Rectangle {
     draw();
 }
 
-function computationalApp(rectangle: Rectangle) {
+function computationalApp(rectangle: GeometricRectangle) {
     rectangle.calculateArea();
 }
 

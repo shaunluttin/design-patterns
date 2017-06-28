@@ -26,23 +26,56 @@
 \section{Fundamentals}
 
 \begin{frame}{Abstraction}
+    \par Delineates a simplified, context-specific representation of a thing.
+    \begin{itemize}
+        \item Ignores contextually irrelevant details.
+        \item Includes contextually relevant details.
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{Encapsulation}
+    \par Restricts outside access to a things parts.
+    \par Bundles a things state with the routines that use that state.
 \end{frame}
 
 \begin{frame}{Inheritance}
+    \par Grants one thing the capabilities of another thing.
+    \par Is not the same as though often agrees with subtyping.
+    \par Includes prototypal and class-based inheritance.
 \end{frame}
 
 \begin{frame}{Polymorphism}
+    \par Pluralizes the numbers of types on which a routine can operate.
+    \begin{itemize}
+        \item Ad hoc / static polymorphism (aka method overloading)
+        \item Parameteric polymorphism (aka generics)
+        \item Subtype polymorphism
+    \end{itemize}
 \end{frame}
 
 \section{Principles}
 
 \subsection{A class should have only one reason to change.}
 
+\begin{frame}{Foobar}
+    \par A reason to change is a responsibility or an axis-of-change.
+    \par Changes refer to changes in source code not to variables at runtime.
+    \par Example responsibilities: print an invoice, calculate tax.
+    \par Loosely coupled responsibilities bring benefits:
+    \begin{itemize}
+        \item Clients can consume individual responsibilities.
+        \item Responsibilities can change without breaking each other.
+        \item Responsibilities can be recompiled independently.
+    \end{itemize}
+    \par The art is to balance rigidly and needless complexity. 
+\end{frame}
+
 \begin{frame}{}
     \lstinputlisting{reason-to-change-01.ts}
+\end{frame}
+
+\begin{frame}{}
+    \lstinputlisting{reason-to-change-02.ts}
 \end{frame}
 
 \subsection{Classes should be open to extension and closed for modification.}
