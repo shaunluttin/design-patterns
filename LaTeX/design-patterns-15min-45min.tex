@@ -66,11 +66,13 @@
 
 \subsection{A class should have only one reason to change.}
 
-\begin{frame}{Foobar}
+\begin{frame}{What does it mean?}
     \par A reason to change is a responsibility or an axis-of-change.
-    \par Changes refer to changes in source code not to variables at runtime.
+    \par Change refers to changes in source code not to variables at runtime.
     \par Example responsibilities: print an invoice, calculate tax.
-    \par Loosely coupled responsibilities bring benefits:
+\end{frame}
+
+\begin{frame}{Why does it matter?}
     \begin{itemize}
         \item Clients can consume individual responsibilities.
         \item Responsibilities can change without breaking each other.
@@ -89,42 +91,84 @@
 
 \subsection{Classes should be open to extension and closed for modification.}
 
+\begin{frame}{What does it mean?}
+    \par Change the way a module behaves,
+    \par without changing its source code.
+    \par How? Use abstraction.
+    \par E.g. A draw() method ought to be closed against
+    \begin{itemize}
+        \item new shapes (via a Shape abstraction),
+        \item new ways to order shapes (via an ordering abstraction), though
+        \itemcannot be closed against all changes. 
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Why does it matter?}
+    \par Protect existing code against breaking changes.
+\end{frame}
+
 \begin{frame}{}
+    \lstinputlisting{open-closed-01.ts}
+\end{frame}
+
+\begin{frame}{}
+    \lstinputlisting{open-closed-02.ts}
 \end{frame}
 
 \subsection{Depend on abstractions not on concrete classes.}
 
-\begin{frame}{}
+\begin{frame}{What does it mean?}
+\end{frame}
+
+\begin{frame}{Why does it matter?}
 \end{frame}
 
 \subsection{Don't call us, we'll call you.}
 
-\begin{frame}{}
+\begin{frame}{What does it mean?}
+\end{frame}
+
+\begin{frame}{Why does it matter?}
 \end{frame}
 
 \subsection{Encapsulate what varies.}
 
-\begin{frame}{}
+\begin{frame}{What does it mean?}
+\end{frame}
+
+\begin{frame}{Why does it matter?}
 \end{frame}
 
 \subsection{Favour composition over inheritance.}
 
-\begin{frame}{}
+\begin{frame}{What does it mean?}
+\end{frame}
+
+\begin{frame}{Why does it matter?}
 \end{frame}
 
 \subsection{Only talk to your friends.}
 
-\begin{frame}{}
+\begin{frame}{What does it mean?}
+\end{frame}
+
+\begin{frame}{Why does it matter?}
 \end{frame}
 
 \subsection{Program to interfaces not to implementations.}
 
-\begin{frame}{}
+\begin{frame}{What does it mean?}
+\end{frame}
+
+\begin{frame}{Why does it matter?}
 \end{frame}
 
 \subsection{Strive for loosely coupled designs among objects that interact.}
 
-\begin{frame}{}
+\begin{frame}{What does it mean?}
+\end{frame}
+
+\begin{frame}{Why does it matter?}
 \end{frame}
 
 \end{document}
