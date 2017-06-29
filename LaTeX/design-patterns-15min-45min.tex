@@ -99,7 +99,7 @@
     \begin{itemize}
         \item new shapes (via a Shape abstraction),
         \item new ways to order shapes (via an ordering abstraction), though
-        \itemcannot be closed against all changes. 
+        \item cannot be closed against all changes. 
     \end{itemize}
 \end{frame}
 
@@ -126,9 +126,32 @@
 \subsection{Don't call us, we'll call you.}
 
 \begin{frame}{What does it mean?}
+    \par Inversion of Control: 
+    \begin{itemize}
+        \item Application code defines a routine (operation/function),
+        \item plugs that routine into the framework, and 
+        \item the framework controls when to execute it.
+    \end{itemize}
+    \par Whereas libraries tend to provide normal control, 
+    \par in which we call the library code,
+    \par frameworks tend to provide inversion of control (IoC),
+    \par in which the framework calls us.
+\end{frame}
+
+\begin{frame}
+Inversion of Control is a key part of what makes a framework different to a library.
+Martin Fowler (26 June 2005)
 \end{frame}
 
 \begin{frame}{Why does it matter?}
+\end{frame}
+
+\begin{frame}{Binding to events:}
+    \lstinputlisting{inversion-of-control-01.ts}
+\end{frame}
+
+\begin{frame}{Implementing interfaces:}
+    \lstinputlisting{inversion-of-control-02.ts}
 \end{frame}
 
 \subsection{Encapsulate what varies.}
