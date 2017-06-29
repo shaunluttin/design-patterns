@@ -7,6 +7,10 @@
 \usepackage{times}
 \usepackage{listings}
 
+% https://www.sharelatex.com/learn/Inserting_Images
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
 \title{Design Patterns}
 \subtitle{aka Object Oriented Programming}
 
@@ -14,6 +18,9 @@
 \AtBeginSubsection{\frame{\subsectionpage}}
 
 \setbeamersize{text margin left=2mm,text margin right=2mm} 
+
+% https://www.sharelatex.com/learn/Paragraph_formatting#/Paragraph_spacing
+\renewcommand{\baselinestretch}{1.5}
 
 \lstset{
     % https://tex.stackexchange.com/a/34690/137042
@@ -126,6 +133,8 @@
         \item High-level modules should not depend upon low-level modules. Both should depend on abstractions.
         \item Abstractions should not depend upon details. Details should depend upon abstractions.
     \end{itemize}
+    \includegraphics{abstractions-not-concrete-classes-01}
+    \includegraphics{abstractions-not-concrete-classes-02}
 \end{frame}
 
 \begin{frame}{Why does it matter?}
