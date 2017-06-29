@@ -117,9 +117,15 @@
 
 \subsection{Depend on abstractions not on concrete classes.}
 
+% http://aspiringcraftsman.com/2008/12/28/examining-dependency-inversion/
+
 \begin{frame}{What does it mean?}
     \par Also known as the Dependency Inversion Principle.
     \par It inverts the traditional, procedural dependency hierarchy.
+    \begin{itemize}
+        \item High-level modules should not depend upon low-level modules. Both should depend on abstractions.
+        \item Abstractions should not depend upon details. Details should depend upon abstractions.
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{Why does it matter?}
@@ -225,12 +231,37 @@ Martin Fowler (26 June 2005)
 \begin{frame}{Why does it matter?}
 \end{frame}
 
+\begin{frame}{}
+    \lstinputlisting{only-talk-to-friends-01.ts}
+\end{frame}
+
+\begin{frame}{}
+    \lstinputlisting{only-talk-to-friends-02.ts}
+\end{frame}
+
 \subsection{Program to interfaces not to implementations.}
 
 \begin{frame}{What does it mean?}
+    \begin{itemize}
+        \item Program against a contract, 
+        \item which can have many varying implementations.
+    \end{itemize}
+    \par It is much more general than the dependency inversion principle, which requires:
+    \begin{itemize}
+        \item that the high-level component owns the interface, and
+        \item that object creation happens outside the dependent class.
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{Why does it matter?}
+\end{frame}
+
+\begin{frame}{}
+    \lstinputlisting{program-to-interfaces-01.ts}
+\end{frame}
+
+\begin{frame}{}
+    \lstinputlisting{program-to-interfaces-02.ts}
 \end{frame}
 
 \subsection{Strive for loosely coupled designs among objects that interact.}
