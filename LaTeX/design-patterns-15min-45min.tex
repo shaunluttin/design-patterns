@@ -118,9 +118,20 @@
 \subsection{Depend on abstractions not on concrete classes.}
 
 \begin{frame}{What does it mean?}
+    \par Also known as the Dependency Inversion Principle.
+    \par It inverts the traditional, procedural dependency hierarchy.
 \end{frame}
 
 \begin{frame}{Why does it matter?}
+    \par Without inversion, changing the utility layer may effect the policy layer. 
+\end{frame}
+
+\begin{frame}{}
+    \lstinputlisting{abstractions-not-concrete-classes-01.ts}
+\end{frame}
+
+\begin{frame}{}
+    \lstinputlisting{abstractions-not-concrete-classes-02.ts}
 \end{frame}
 
 \subsection{Don't call us, we'll call you.}
@@ -157,9 +168,37 @@ Martin Fowler (26 June 2005)
 \subsection{Encapsulate what varies.}
 
 \begin{frame}{What does it mean?}
+    \par "What varies" means source code that might change.
+    \par "Encapsulate" means restrict outside access to a things parts.
+    \par Therefore: Restrict outside access to source code that might change.
+    \par This is a principle of procedural, functional, and OO programming.
+\end{frame}
+
+\begin{frame}{What causes change?}
+    \begin{itemize}
+        \item Changing requirements causes change.
+        \item Refactoring causes change. 
+        \item Performance improvements cause change. 
+        \item Changing business needs cause change. 
+        \item Improved understanding of the problem causes change. 
+        \item Change in government policies causes change.
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{Why does it matter?}
+    \par Why? We can change code later in as few places as possible.
+\end{frame}
+
+\begin{frame}{}
+    \lstinputlisting{encapsulate-what-varies-01.ts}
+\end{frame}
+
+\begin{frame}{}
+    \lstinputlisting{encapsulate-what-varies-02.ts}
+\end{frame}
+
+\begin{frame}{}
+    \lstinputlisting{encapsulate-what-varies-03.ts}
 \end{frame}
 
 \subsection{Favour composition over inheritance.}
