@@ -8,7 +8,6 @@ export default abstract class Organ {
 
     public attachHost(host: Human) {
         this.host = host;
-
         this.afterAttachHost();
     }
 
