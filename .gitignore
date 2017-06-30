@@ -10,3 +10,5 @@ project.lock.json
 *.snm
 *.toc
 *.swp
+node_modules/
+*.js

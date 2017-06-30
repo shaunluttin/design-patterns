@@ -1,0 +1,15 @@
+{
+  "name": "human-design-principles",
+  "version": "0.0.1",
+  "description": "Illustration of design principles by coding a human. ",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node index.js"
+  },
+  "author": "Shaun Luttin",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^2.4.1"
+  }
+}
