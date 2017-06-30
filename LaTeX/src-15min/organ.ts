@@ -1,7 +1,7 @@
 import Human from "./human";
 
-// human defines the interface for the organ
-// that's important for the Dependency Inversion Principle
+// principle: dependency inversion principle
+// the Human owns the interface for the Organ
 export default abstract class Organ {
 
     protected host: Human;
