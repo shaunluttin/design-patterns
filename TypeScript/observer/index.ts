@@ -2,7 +2,6 @@ import Timer from "./timer";
 import ConsoleClock from "./console-clock";
 import OtherConsoleClock from "./other-console-clock";
 
-
 const timer = new Timer();
 timer.start();
 
