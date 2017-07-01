@@ -21,5 +21,4 @@ export default class OtherConsoleClock extends Observer {
             console.log("time:" + time);
         }
     }
-
 }

@@ -22,5 +22,4 @@ export default class Timer extends Subject {
             1000
         );
     }
-
 }
