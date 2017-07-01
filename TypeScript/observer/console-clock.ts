@@ -17,5 +17,4 @@ export default class ConsoleClock extends Observer {
             console.log("seconds:" + this.subject.seconds)
         }
     }
-
 }
