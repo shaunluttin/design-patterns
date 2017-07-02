@@ -6,7 +6,6 @@ project.lock.json
 *.log
 *.nav
 *.out
-*.pdf
 *.snm
 *.toc
 *.swp
