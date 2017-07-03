@@ -14,17 +14,18 @@ class Carrot implements Juiceable {
     }
 }
 
-function createJuiceMedly(): Array<string> {
-
-    let ingredients: Array<Juiceable> = [
-        new Orange(),
-        new Carrot()
-    ];
+function juicer(oranges: Array<Orange>, carrots: Array<Carrot>): Array<string> {
 
     // This is programming to interfaces.
-    // The call to `map` only cares that it is dealing with Juiceables.
+    // The following only cares that it is dealing with Juiceables.
+    let ingredients: Array<Juiceable> = oranges.concat(carrots);
     return ingredients.map((j: Juiceable) => j.juice());
 }
 
 // run
-const juice = createJuiceMedly();
+const juice = juicer(
+    [new Orange(), new Orange()],
+    [new Carrot()]
+);
+
+console.log(juice);

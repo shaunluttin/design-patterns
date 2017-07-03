@@ -31,7 +31,13 @@
 
 \begin{frame}{Program to interfaces not to implementations.}
     \begin{itemize}
-        \item
+        \item an interface says only what requests it will receive
+        \item an implementation says how it will handle those requests
+        \item programming to interfaces helps because it
+            \begin{itemize}
+                \item lets us easily change an implementation, even at runtime
+                \item allows applications to send the same request to different classes
+            \end{itemize}
     \end{itemize}
 \end{frame}
 
@@ -41,7 +47,18 @@
 
 \begin{frame}{Depend on abstractions not on concrete classes.}
     \begin{itemize}
-        \item
+        \item interfaces and abstractions are similar: neither can exist
+        \item concrete classes can exist (i.e. can become objects)
+        \item to depend on something means a direct reference to it
+        \item The Dependency Inversion Principle (Martin, 1996)
+        \begin{itemize}
+            \item Traditionally, high-level modules depend on low-level modules:
+            \item `Higher` ---> `Middle` ---> `Lower` ---> ...
+            \item Dependency Inversion inverts that:
+            \item `Higher` ---> `Abstraction` <--- `Middle` ---> `Abstraction` <--- `Lower` ...
+        \end{itemize}
+        \item When layering, higher-levels define the abstractions
+        \item and lower-levels implement the abstractions.
     \end{itemize}
 \end{frame}
 
