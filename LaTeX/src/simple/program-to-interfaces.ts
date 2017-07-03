@@ -1,31 +1,30 @@
-// a passenger has a destination
-export interface Passenger {
-    getDestination(): any;
+export interface Juiceable {
+    juice(): string;
 }
 
-export class Child implements Passenger {
-    getDestination(): any {
-        throw new Error("Method not implemented.");
+class Orange implements Juiceable {
+    public juice() {
+        return "orange juice";
     }
 }
 
-export class Dog implements Passenger {
-    getDestination(): any {
-        throw new Error("Method not implemented.");
+class Carrot implements Juiceable {
+    public juice() {
+        return "carrot juice";
     }
 }
 
-export class Car {
+function createJuiceMedly(): Array<string> {
 
-    private destinations: Array<any>;
+    let ingredients: Array<Juiceable> = [
+        new Orange(),
+        new Carrot()
+    ];
 
-    public Accept(passenger: Passenger) {
-        // this is an example of programming to interfaces
-        this.destinations.push(passenger);
-    }
+    // This is programming to interfaces.
+    // The call to `map` only cares that it is dealing with Juiceables.
+    return ingredients.map((j: Juiceable) => j.juice());
 }
 
-const car = new Car();
-
-car.Accept(new Child());
-car.Accept(new Dog());
+// run
+const juice = createJuiceMedly();
