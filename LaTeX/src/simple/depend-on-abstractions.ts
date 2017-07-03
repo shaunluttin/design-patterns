@@ -22,7 +22,3 @@ export class Carrot implements Juiceable {
         return "carrot juice";
     }
 }
-
-// run
-const juice = juicer([new Orange(), new Carrot()]);
-console.log(juice);

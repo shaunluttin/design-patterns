@@ -21,11 +21,3 @@ function juicer(oranges: Array<Orange>, carrots: Array<Carrot>): Array<string> {
     let ingredients: Array<Juiceable> = oranges.concat(carrots);
     return ingredients.map((j: Juiceable) => j.juice());
 }
-
-// run
-const juice = juicer(
-    [new Orange(), new Orange()],
-    [new Carrot()]
-);
-
-console.log(juice);
