@@ -1,23 +1,45 @@
 export interface Juiceable {
-    juice(): string;
+    squeeze(): Juice;
 }
 
 class Orange implements Juiceable {
-    public juice() {
-        return "orange juice";
+    public squeeze() {
+        return new Juice("orange juice");
     }
 }
 
 class Carrot implements Juiceable {
-    public juice() {
-        return "carrot juice";
+    public squeeze() {
+        return new Juice("carrot juice");
     }
 }
 
-function juicer(oranges: Array<Orange>, carrots: Array<Carrot>): Array<string> {
+class Juice {
+    constructor(private name: string) { }
+}
 
-    // This is programming to interfaces.
-    // The following only cares that it is dealing with Juiceables.
-    let ingredients: Array<Juiceable> = oranges.concat(carrots);
-    return ingredients.map((j: Juiceable) => j.juice());
+class JuiceGarden {
+
+    pickOrange(): Juiceable {
+        return new Orange();
+    }
+
+    pickCarrot(): Juiceable {
+        return new Carrot();
+    }
+}
+
+// The juicer is programming to interfaces.
+// The following only cares that it is dealing with Juiceables.
+function orangeCarrotJuice(juiceGarden: JuiceGarden): Array<Juice> {
+
+    const orange: Juiceable = juiceGarden.pickOrange();
+    const carrot: Juiceable = juiceGarden.pickCarrot();
+
+    let ingredients: Array<Juiceable> = [
+        orange,
+        carrot
+    ];
+
+    return ingredients.map((j: Juiceable) => j.squeeze());
 }
