@@ -13,25 +13,18 @@ export namespace HighLevel {
     }
 }
 
-export namespace LowLevel {
-
-    export class Orange implements HighLevel.Juiceable {
-        public juice() {
-            return "orange juice";
-        }
+// orange and carrot are defined in the lower-level
+export class Orange implements HighLevel.Juiceable {
+    public juice() {
+        return "orange juice";
     }
+}
 
-    export class Carrot implements HighLevel.Juiceable {
-        public juice() {
-            return "carrot juice";
-        }
+export class Carrot implements HighLevel.Juiceable {
+    public juice() {
+        return "carrot juice";
     }
 }
 
 // run
-const juice = HighLevel.createJuiceMedly(
-    [
-        new LowLevel.Orange(),
-        new LowLevel.Carrot()
-    ]
-);
+const juice = HighLevel.createJuiceMedly([new Orange(), new Carrot()]);
