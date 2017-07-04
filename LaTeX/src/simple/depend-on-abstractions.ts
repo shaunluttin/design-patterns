@@ -1,32 +1,32 @@
-// This is dependency inversion.
 // Both the higher-level juicer and the lower-level components 
 // depend on an abstraction.
-export function juicer(ingredients: Array<Juiceable>): Array<string> {
-    // Dependency inversion leverages programming to interfaces.
-    return ingredients.map((i) => i.juice());
-}
+namespace HigherLevel {
 
-export interface Juiceable {
-    juice(): string;
-}
+    export function juicer(ingredients: Array<Juiceable>): Array<string> {
+        // Dependency inversion leverages programming to interfaces.
+        return ingredients.map((i) => i.juice());
+    }
 
-// orange and carrot are lower-level modules
-export class Orange implements Juiceable {
-    public juice() {
-        return "orange juice";
+    // The higher level module owns the abstraction on which it depends.
+    export interface Juiceable {
+        juice(): string;
     }
 }
 
-export class Carrot implements Juiceable {
-    public juice() {
-        return "carrot juice";
+namespace LowerLevel {
+
+    export class Orange implements HigherLevel.Juiceable {
+        public juice() {
+            return "orange juice";
+        }
+    }
+
+    export class Carrot implements HigherLevel.Juiceable {
+        public juice() {
+            return "carrot juice";
+        }
     }
 }
-
-
-
-
-
 
 
 
