@@ -20,6 +20,6 @@ class RaisedBed {
  * 2. maintaining it after planting
  * 3. harvesting
  * 
- * It's likely that the watering system will change independently of our harvesting system.
- * 
+ * It's likely that our watering system will change 
+ * independently of our harvesting system.
  */
