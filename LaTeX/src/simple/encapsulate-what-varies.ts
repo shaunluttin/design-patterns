@@ -5,7 +5,10 @@ class Product {
 // We have encapsulated the calculation of tax.
 class TaxCalculator {
     public calculateTax(product: Product): number {
-        throw new Error("TODO: Calculate the tax on the product.");
+        const tax = 0;
+        // Do the calculation of tax, 
+        // which will likely change over time.
+        return tax;
     }
 }
 
