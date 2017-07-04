@@ -17,13 +17,24 @@ class FarmStand {
     private cart: Array<Product>;
 
     public DisplayGrandTotal(): number {
+        // Question: What else might we want to change without redesign?
         const taxCalculator = new TaxCalculator();
-
         return this.cart.reduce((sum, product) => {
-            // Question: What else might we want to change without redesign?
             const tax = taxCalculator.calculateTax(product);
             const productGrandTotal = tax + product.price;
             return sum + productGrandTotal;
         }, 0);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+/* Out of frame at ln 40 */

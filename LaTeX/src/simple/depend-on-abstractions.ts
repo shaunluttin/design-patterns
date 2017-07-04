@@ -22,3 +22,19 @@ export class Carrot implements Juiceable {
         return "carrot juice";
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Out of frame at ln 40 */
