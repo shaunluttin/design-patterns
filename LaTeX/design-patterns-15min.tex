@@ -62,7 +62,7 @@
 \begin{frame}{Why?}
 
     \begin{itemize}
-        \item Allow change without redesign.
+        \item Allow change (of system capacities) without redesign.
         \item Allow reuse in other applications.
     \end{itemize}
 
@@ -77,8 +77,8 @@
             \end{itemize}
         \item \ldots what varies.
             \begin{itemize}
-                \item This refers to source code.
-                \item Source code varies due to changing requirements.
+                \item This refers to changes in the source code.
+                \item Source code changes due to changing requirements.
                 \item Requirements change for a lots of reasons.
                 \item E.g. A change in government may cause a change in tax law.
             \end{itemize}
@@ -164,7 +164,19 @@
 
 \begin{frame}{A class should have only one reason to change.}
     \begin{itemize}
-        \item The Single Responsibility Principle ()
+        \item The Single Responsibility Principle (Martin, 2003)
+        \item ``A class should have only one reason to change''
+        \begin{itemize}
+            \item Recall, from ``encapsulate what varies.''
+            \item This refers to changes in the source code.
+            \item Source code changes due to changing requirements.
+            \item
+        \end{itemize}
+    \item Why? 
+        \begin{itemize}
+            \item Reuse: Allow a client to use feature X without bringing feature A-Z. 
+            \item Change: Allow a developer to change feature X without breaking feature A-Z.
+        \end{itemize}
     \end{itemize}
 \end{frame}
 
