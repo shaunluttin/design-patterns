@@ -189,8 +189,30 @@
 
 \begin{frame}{Don't call us, we'll call you.}
     \begin{itemize}
-        \item Inversion of Control
+        \item "Hollywood Principle" (Sweet, 1983)
+        \item "Inversion of Control" (Johnson and Foote, 1988)
+            \begin{itemize}
+                \item Dependency injection is a type of Inversion of Control
+                \item IoC containers are a type of Dependency Injection
+            \end{itemize}
+        \item Dependency Inversion - who owns the abstraction?
+        \item Inversion of Control - when do things happen?
+        \item "coordinating and sequencing application activity"         
+        \item "makes a framework different from a library":
+            \begin{itemize}
+                \item library: "a set of functions you can call"
+                \item framework: "insert your behavior into various places"
+            \end{itemize}
+        \item How? subclassing, implementing iterfaces, binding/events
     \end{itemize}
+\end{frame}
+
+\begin{frame}{Don't call us, we'll call you \ldots}
+    \vspace{0cm}
+    \begin{columns}
+        \column{\dimexpr\paperwidth-40pt}
+        \lstinputlisting{src/simple/dont-call-us.ts}
+    \end{columns}
 \end{frame}
 
 \begin{frame}{Classes should be open to extension and closed for modification.}
