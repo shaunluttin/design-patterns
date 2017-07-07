@@ -15,11 +15,21 @@
 
 \title{Design Principles}
 \subtitle{aka Object Oriented Programming}
+\author{Shaun Luttin}
 
 \begin{document}
 
 \begin{frame}
   \titlepage
+\end{frame}
+
+\begin{frame}{Goal}
+
+    \begin{itemize}
+        \item Become vaguely familiar with these principles.
+        \item Have a starting off point for further research.
+    \end{itemize}
+
 \end{frame}
 
 \begin{frame}{Why?}
@@ -134,23 +144,43 @@
 
 \begin{frame}{Classes should be open to extension and closed for modification.}
     \begin{itemize}
-        \item The Open-Closed Principle (TODO)
-        \item Source code that people are using is sacrosanct.
+        \item The Open-Closed Principle
+        \item Once it is shipped, the source code is sacrosanct.
+        \item Rather than change the source code and risk breaking it, 
+        \item extend the source code via inheritance or wrapping. 
+        \item E.g. the Decorator Pattern (Gamma et al, 1977)
     \end{itemize}
 \end{frame}
 
 \begin{frame}{Favour composition over inheritance.}
     \begin{itemize}
-        \item The Liskov Substitution Principle (TODO)
+        \item Composition means a has-a relationship.
+            \begin{itemize}
+                \item It is often more semantically natural.
+                \item It lets us swap implementations at runtime.
+            \end{itemize}
+        \item Inheritance means an is-a relationship.
+            \begin{itemize}
+                \item Tall class heirachies are brittle.
+                \item Changing an implementation is limited to compile time.
+                \item It is harder to do correctly.
+            \end{itemize}
+        \item The Liskov Substitution Principle (Liskov and Wing, 1994)
+            \begin{itemize}
+                \item A consumer that is expecting A, 
+                \item should have no surprises on receiving a child of A.
+                \item Compilers do not help: this is a semantic syntactic contraint.
+                \item e.g. class Hemlock should probably not inherit class Vegetable.
+            \end{itemize}
     \end{itemize}
 \end{frame}
 
 \begin{frame}{Strive for loosely coupled designs among objects that interact.}
     \begin{itemize}
         \item This is the summary statement for all the princples.
-        \item When loosely coupled, we can...
-        \item change X without needing to change Y, and
-        \item use X without needing to bring along Y.
+        \item When loosely coupled, we can \ldots
+        \item \ldots change X without needing to change Y, and
+        \item \ldots use X without needing to bring along Y.
     \end{itemize}
 \end{frame}
 
