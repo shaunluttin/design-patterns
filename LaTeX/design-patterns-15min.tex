@@ -6,45 +6,8 @@
 
 \usepackage[english]{babel}
 \usepackage[latin1]{inputenc}
-\usepackage{listings}
 \usepackage{textcomp}
 
-% TypeScript Code Listings
-% Taken from Lena Herrmann at 
-% http://lenaherrmann.net/2010/05/20/javascript-syntax-highlighting-in-the-latex-listings-package
-\usepackage{color}
-\definecolor{lightgray}{rgb}{.9,.9,.9}
-\definecolor{darkgray}{rgb}{.4,.4,.4}
-\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
-
-\lstdefinelanguage{TypeScript}{
-  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
-  keywordstyle=\color{blue}\bfseries,
-  ndkeywords={class, export, boolean, throw, implements, import, this},
-  ndkeywordstyle=\color{darkgray}\bfseries,
-  identifierstyle=\color{black},
-  sensitive=false,
-  comment=[l]{//},
-  morecomment=[s]{/*}{*/},
-  commentstyle=\color{purple}\ttfamily,
-  stringstyle=\color{red}\ttfamily,
-  morestring=[b]',
-  morestring=[b]"
-}
-
-\lstset{
-   language=TypeScript,
-   backgroundcolor=\color{white},
-   extendedchars=true,
-   basicstyle=\tiny\ttfamily,
-   showstringspaces=false,
-   showspaces=false,
-   tabsize=2,
-   breaklines=true,
-   showtabs=false,
-   captionpos=b
-}
-% ------ End 
 
 % https://www.sharelatex.com/learn/Inserting_Images
 \usepackage{graphicx}
@@ -87,13 +50,6 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Encapsulate what varies \ldots}
-    \begin{columns}
-        \column{\dimexpr\paperwidth-40pt}
-        \lstinputlisting{src/simple/encapsulate-what-varies.ts}
-    \end{columns}
-\end{frame}
-
 \begin{frame}{Program to interfaces not to implementations.}
     \begin{itemize}
         \item an interface says only what requests it will receive
@@ -104,13 +60,6 @@
                 \item allows applications to send the same request to different classes
             \end{itemize}
     \end{itemize}
-\end{frame}
-
-\begin{frame}{Program to interfaces \ldots}
-    \begin{columns}
-        \column{\dimexpr\paperwidth-40pt}
-        \lstinputlisting{src/simple/program-to-interfaces.ts}
-    \end{columns}
 \end{frame}
 
 \begin{frame}{Depend on abstractions not on concrete classes.}
@@ -131,14 +80,6 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Depend on abstractions \ldots}
-    \vspace{0cm}
-    \begin{columns}
-        \column{\dimexpr\paperwidth-40pt}
-        \lstinputlisting{src/simple/depend-on-abstractions.ts}
-    \end{columns}
-\end{frame}
-
 \begin{frame}{Only talk to your friends.}
     \begin{itemize}
         \item The Law of Demeter (Holland, 1987)
@@ -152,14 +93,6 @@
                 \item E.g. fluent interfaces use many dots.
             \end{itemize}
     \end{itemize}
-\end{frame}
-
-\begin{frame}{Only talk to your friends \ldots}
-    \vspace{0cm}
-    \begin{columns}
-        \column{\dimexpr\paperwidth-40pt}
-        \lstinputlisting{src/simple/only-talk-to-your-friends.ts}
-    \end{columns}
 \end{frame}
 
 \begin{frame}{A class should have only one reason to change.}
@@ -177,14 +110,6 @@
             \item Change feature X without breaking/recompiling what depends on feature A-Z.
         \end{itemize}
     \end{itemize}
-\end{frame}
-
-\begin{frame}{A class should have only one reason to change \ldots}
-    \vspace{0cm}
-    \begin{columns}
-        \column{\dimexpr\paperwidth-40pt}
-        \lstinputlisting{src/simple/one-reason-to-change.ts}
-    \end{columns}
 \end{frame}
 
 \begin{frame}{Don't call us, we'll call you.}
@@ -207,29 +132,25 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Don't call us, we'll call you \ldots}
-    \vspace{0cm}
-    \begin{columns}
-        \column{\dimexpr\paperwidth-40pt}
-        \lstinputlisting{src/simple/dont-call-us.ts}
-    \end{columns}
-\end{frame}
-
 \begin{frame}{Classes should be open to extension and closed for modification.}
     \begin{itemize}
-        \item The Open-Closed Principle ()
+        \item The Open-Closed Principle (TODO)
+        \item Source code that people are using is sacrosanct.
     \end{itemize}
 \end{frame}
 
 \begin{frame}{Favour composition over inheritance.}
     \begin{itemize}
-        \item The Liskov Substitution Principle ()
+        \item The Liskov Substitution Principle (TODO)
     \end{itemize}
 \end{frame}
 
 \begin{frame}{Strive for loosely coupled designs among objects that interact.}
     \begin{itemize}
-        \item
+        \item This is the summary statement for all the princples.
+        \item When loosely coupled, we can...
+        \item change X without needing to change Y, and
+        \item use X without needing to bring along Y.
     \end{itemize}
 \end{frame}
 
