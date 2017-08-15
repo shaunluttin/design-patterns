@@ -2,12 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CreationalPatterns
+namespace CreationalPatterns.Models
 {
-
     public class Maze
     {
-
         private List<Room> _rooms = new List<Room>();
 
         public void AddRoom(Room room)

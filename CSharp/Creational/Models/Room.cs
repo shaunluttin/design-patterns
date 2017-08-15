@@ -1,6 +1,6 @@
 using System;
 
-namespace CreationalPatterns
+namespace CreationalPatterns.Models
 {
     public class Room : MapSite
     {
@@ -16,13 +16,13 @@ namespace CreationalPatterns
             _sides[(int)direction] = mapSite;
         }
 
-        public Room(short roomNo)
+        public Room(int roomNo)
         {
             _roomNumber = roomNo;
         }
 
         private MapSite[] _sides = new MapSite[4];
 
-        private short _roomNumber;
+        private int _roomNumber;
     }
 }

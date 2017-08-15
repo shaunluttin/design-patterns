@@ -1,6 +1,6 @@
 using System;
 
-namespace CreationalPatterns
+namespace CreationalPatterns.Models
 {
     public class Door : MapSite
     {

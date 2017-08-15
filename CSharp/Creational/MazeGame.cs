@@ -1,6 +1,7 @@
+using CreationalPatterns.Models;
+
 namespace CreationalPatterns
 {
-
     public class MazeGame
     {
         /*

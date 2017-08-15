@@ -1,8 +1,7 @@
 using System;
 
-namespace CreationalPatterns
+namespace CreationalPatterns.Models
 {
-
     public class Wall : MapSite
     {
         public override void Enter()

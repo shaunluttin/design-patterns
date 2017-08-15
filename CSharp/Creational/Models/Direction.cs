@@ -1,4 +1,4 @@
-namespace CreationalPatterns {
+namespace CreationalPatterns.Models {
     public enum Direction {
         North,
         South,

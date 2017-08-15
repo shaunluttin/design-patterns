@@ -1,4 +1,4 @@
-namespace CreationalPatterns
+namespace CreationalPatterns.Models
 {
     /*
      * "The common abstract class for all the components of the maze." (Gamma et al, 1994)
