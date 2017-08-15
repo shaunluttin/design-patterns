@@ -1,18 +1,22 @@
-using System;
+﻿using System;
 
-class Program
+namespace Builder
 {
-    static void Main(string[] args)
+    class Program
     {
-        var builder = new ConcreteBuilder();
-        var director = new Director(builder);
-        director.BuildProductWithTwoArms();
-
-        var product = builder.GetResult();
-
-        foreach(var part in product.Parts)
+        static void Main(string[] args)
         {
-            Console.WriteLine(part);
+            var builder = new ConcreteBuilder();
+            var director = new Director(builder);
+            director.BuildProductWithTwoArms();
+
+            var product = builder.GetResult();
+
+            foreach (var part in product.Parts)
+            {
+                Console.WriteLine(part);
+                Console.WriteLine("Hello World!");
+            }
         }
     }
 }
