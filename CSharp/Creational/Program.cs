@@ -6,6 +6,10 @@ namespace CreationalPatterns
     {
         static void Main(string[] args)
         {
+            var program = new Program();
+
+            program.WithNaiveApproach();
+            program.WithAbstractFactory();
         }
 
         public void WithNaiveApproach()

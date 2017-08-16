@@ -7,7 +7,7 @@
         {
             "taskName": "build",
             "args": [
-                "${workspaceRoot}/Builder/Builder.csproj"
+                "${workspaceRoot}/Creational.csproj"
             ],
             "isBuildCommand": true,
             "problemMatcher": "$msCompile"
