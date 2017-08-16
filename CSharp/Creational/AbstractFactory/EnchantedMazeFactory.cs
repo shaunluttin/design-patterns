@@ -1,27 +1,21 @@
 using CreationalPatterns.Models;
 
-namespace CreationalPatterns.AbstractFactory {
-
+namespace CreationalPatterns.AbstractFactory
+{
     public class EnchantedMazeFactory : MazeFactory
     {
         public override Door MakeDoor(Room room1, Room room2)
         {
-            throw new System.NotImplementedException();
-        }
-
-        public override Maze MakeMaze()
-        {
-            throw new System.NotImplementedException();
+            return new DoorNeedingSpell(room1, room2);
         }
 
         public override Room MakeRoom(int n)
         {
-            throw new System.NotImplementedException();
+            return new EnchantedRoom(n, CastSpell());
         }
 
-        public override Wall MakeWall()
-        {
-            throw new System.NotImplementedException();
+        public Spell CastSpell() {
+            return new Spell();
         }
     }
 }
