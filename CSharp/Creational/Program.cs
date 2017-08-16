@@ -35,5 +35,14 @@ namespace CreationalPatterns
             var enchantedMazeFactory = new AbstractFactory.EnchantedMazeFactory();
             var enchantedMaze = mazeGame.CreateMaze(enchantedMazeFactory);
         }
+
+        public void WithBuilder()
+        {
+            var mazeGame = new Builder.MazeGame();
+
+            var standardBuilder = new Builder.StandardMazeBuilder();
+            var standardMaze = mazeGame.CreateMaze(standardBuilder);
+            var standardComplexMaze = mazeGame.CreateComplexMaze(standardBuilder);
+        }
     }
 }

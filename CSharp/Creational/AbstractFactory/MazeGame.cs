@@ -7,7 +7,7 @@ namespace CreationalPatterns.AbstractFactory
     {
         public Maze CreateMaze(MazeFactory factory)
         {
-            // All we did was a 
+            // All we did was:
             // 1. inject a `MazeFactory` and
             // 2. find-replace `new ` with `factory.Make`.
 
