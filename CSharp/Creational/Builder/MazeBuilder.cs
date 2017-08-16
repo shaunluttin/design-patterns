@@ -15,6 +15,9 @@ namespace CreationalPatterns.Builder
 
         public virtual void BuildDoor(int roomFrom, int roomTo) { }
 
-        public abstract Maze GetMaze();
+        public virtual Maze GetMaze()
+        {
+            return null;
+        }
     }
 }

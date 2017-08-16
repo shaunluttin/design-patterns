@@ -8,7 +8,8 @@ namespace CreationalPatterns.Builder
         // (Gamma et al)
         private Direction CommonWall(Room room1, Room room2)
         {
-            throw new System.NotImplementedException();
+            // for the sake of this demo, return North every time.
+            return Direction.North;
         }
 
         private Maze _currentMaze;

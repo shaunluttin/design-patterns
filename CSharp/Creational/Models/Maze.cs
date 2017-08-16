@@ -18,6 +18,11 @@ namespace CreationalPatterns.Models
             // Subtract one from the roomNo, 
             // because the C# List is zero indexed, 
             // whereas the maze starts in room numbers at one.
+            if (_rooms.Count < roomNo)
+            {
+                return null;
+            }
+
             return _rooms[roomNo - 1];
         }
     }

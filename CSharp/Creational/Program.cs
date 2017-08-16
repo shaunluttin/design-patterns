@@ -10,6 +10,7 @@ namespace CreationalPatterns
 
             program.WithNaiveApproach();
             program.WithAbstractFactory();
+            program.WithBuilder();
         }
 
         public void WithNaiveApproach()
@@ -43,6 +44,11 @@ namespace CreationalPatterns
             var standardBuilder = new Builder.StandardMazeBuilder();
             var standardMaze = mazeGame.CreateMaze(standardBuilder);
             var standardComplexMaze = mazeGame.CreateComplexMaze(standardBuilder);
+
+            var countingBuilder = new Builder.CountingMazeBuilder();
+            mazeGame.CreateMaze(countingBuilder);
+            var counts = countingBuilder.GetCounts();
+            Console.WriteLine($"The maze has {counts.Rooms} rooms and {counts.Doors} doors.");
         }
     }
 }
