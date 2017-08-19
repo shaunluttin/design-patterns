@@ -24,5 +24,24 @@ namespace CreationalPatterns.Models
         private MapSite[] _sides = new MapSite[4];
 
         private int _roomNumber;
+
+        #region Support the Prototype pattern.
+
+        public Room(Room other)
+        {
+            _roomNumber = other._roomNumber;
+        }
+
+        public virtual Room Clone()
+        {
+            return new Room(this);
+        }
+
+        public void Initialize(int n)
+        {
+            _roomNumber = n;
+        }
+
+        #endregion
     }
 }
