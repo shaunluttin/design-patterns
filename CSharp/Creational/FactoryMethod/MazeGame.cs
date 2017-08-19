@@ -6,10 +6,10 @@ namespace CreationalPatterns.FactoryMethod
     {
         public Maze CreateMaze()
         {
-            var aMaze = new Maze();
-            var r1 = new Room(1);
-            var r2 = new Room(2);
-            var theDoor = new Door(r1, r2);
+            var aMaze = MakeMaze();
+            var r1 = MakeRoom(1);
+            var r2 = MakeRoom(2);
+            var theDoor = MakeDoor(r1, r2);
 
             aMaze.AddRoom(r1);
             aMaze.AddRoom(r2);
