@@ -16,8 +16,16 @@
   * Reuse the interactions; change the individuals.
   * Reuse the behavior; change the actors.
   * Reuse the layout; change the furniture.
+  * Reuse the functionality; change the look and feel.
 
 ### Advantages of Abstract Factory
+
+* Abstract factory provides an additional advantage: it "enforces dependencies between the concrete... classes." That is why the Abstract Factory is also known as the Kit pattern. It provides a tickety-boo kit of items that are meant to work together for a specific purpose.
+
+* + "It isolates concrete classes" which makes it easy to change the concrete classes without changing the clients that use them.
+* + "It makes exchanging product families easy" meaning we can swap out one product family for another with a single change to the client code.
+* + "It promotes consistency among products" meaning it keeps us from using a product from family X with an incompatible product from family Y.
+* - "Supporting new kinds of products is difficult" because this requires that we 1. create a new abstract product, 2. extend the abstract factory, 3. extend all of the concrete factories. 
 
 ### Advantages of Factory Method
 
