@@ -11,6 +11,7 @@ namespace CreationalPatterns
             program.WithNaiveApproach();
             program.WithAbstractFactory();
             program.WithBuilder();
+            program.WithFactoryMethod();
         }
 
         public void WithNaiveApproach()
