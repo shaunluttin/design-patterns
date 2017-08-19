@@ -50,5 +50,17 @@ namespace CreationalPatterns
             var counts = countingBuilder.GetCounts();
             Console.WriteLine($"The maze has {counts.Rooms} rooms and {counts.Doors} doors.");
         }
+
+        public void WithFactoryMethod()
+        {
+            var defaultMazeGame = new FactoryMethod.MazeGame();
+            var defaultMaze = defaultMazeGame.CreateMaze();
+
+            var enchantedMazeGame = new FactoryMethod.EnchantedMazeGame();
+            var enchantedMaze = enchantedMazeGame.CreateMaze();
+
+            var bombedMazeGame = new FactoryMethod.BombedMazeGame();
+            var bombedMaze = bombedMazeGame.CreateMaze();
+        }
     }
 }

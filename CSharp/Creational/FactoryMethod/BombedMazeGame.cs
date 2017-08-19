@@ -2,7 +2,7 @@ using CreationalPatterns.Models;
 
 namespace CreationalPatterns.FactoryMethod
 {
-    public class EnchantedMazeGame : MazeGame
+    public class BombedMazeGame : MazeGame
     {
         protected override Room MakeRoom(int n)
         {
