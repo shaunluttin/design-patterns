@@ -15,7 +15,7 @@ namespace CreationalPatterns
             program.WithSingleton();
         }
 
-        public void WithNaiveApproach()
+        private void WithNaiveApproach()
         {
             var mazeGame = new NaiveApproach.MazeGame();
             var maze = mazeGame.CreateMaze();
@@ -25,7 +25,7 @@ namespace CreationalPatterns
          * We can now make different kinds of mazes without 
          * modifying the `CreateMaze` method.
          */
-        public void WithAbstractFactory()
+        private void WithAbstractFactory()
         {
             var mazeGame = new AbstractFactory.MazeGame();
 
@@ -39,7 +39,7 @@ namespace CreationalPatterns
             var enchantedMaze = mazeGame.CreateMaze(enchantedMazeFactory);
         }
 
-        public void WithBuilder()
+        private void WithBuilder()
         {
             var mazeGame = new Builder.MazeGame();
 
@@ -53,7 +53,7 @@ namespace CreationalPatterns
             Console.WriteLine($"The maze has {counts.Rooms} rooms and {counts.Doors} doors.");
         }
 
-        public void WithFactoryMethod()
+        private void WithFactoryMethod()
         {
             var defaultMazeGame = new FactoryMethod.MazeGame();
             var defaultMaze = defaultMazeGame.CreateMaze();
