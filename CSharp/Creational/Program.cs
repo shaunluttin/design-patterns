@@ -11,6 +11,8 @@ namespace CreationalPatterns
             program.WithNaiveApproach();
             program.WithAbstractFactory();
             program.WithBuilder();
+            program.WithFactoryMethod();
+            program.WithSingleton();
         }
 
         public void WithNaiveApproach()
@@ -49,6 +51,32 @@ namespace CreationalPatterns
             mazeGame.CreateMaze(countingBuilder);
             var counts = countingBuilder.GetCounts();
             Console.WriteLine($"The maze has {counts.Rooms} rooms and {counts.Doors} doors.");
+        }
+
+        public void WithFactoryMethod()
+        {
+            var defaultMazeGame = new FactoryMethod.MazeGame();
+            var defaultMaze = defaultMazeGame.CreateMaze();
+
+            var enchantedMazeGame = new FactoryMethod.EnchantedMazeGame();
+            var enchantedMaze = enchantedMazeGame.CreateMaze();
+
+            var bombedMazeGame = new FactoryMethod.BombedMazeGame();
+            var bombedMaze = bombedMazeGame.CreateMaze();
+        }
+
+        private void WithSingleton()
+        {
+            var mazeGame = new Singleton.MazeGame();
+
+            Environment.SetEnvironmentVariable("MAZESTYLE", string.Empty);
+            var defaultMaze = mazeGame.CreateMaze();
+
+            Environment.SetEnvironmentVariable("MAZESTYLE", "bombed");
+            var bombedMaze = mazeGame.CreateMaze();
+
+            Environment.SetEnvironmentVariable("MAZESTYLE", "enchanted");
+            var enchantedMaze = mazeGame.CreateMaze();
         }
     }
 }

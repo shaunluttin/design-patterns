@@ -25,5 +25,26 @@ namespace CreationalPatterns.Models
         {
             Console.WriteLine("You cannot enter a door, silly.");
         }
+
+        #region Support the Prototype pattern.
+
+        public Door(Door other)
+        {
+            _room1 = other._room1;
+            _room2 = other._room2;
+        }
+
+        public virtual Door Clone()
+        {
+            return new Door(this);
+        }
+
+        public void Initialize(Room room1, Room room2)
+        {
+            _room1 = room1;
+            _room2 = room2;
+        }
+
+        #endregion
     }
 }

@@ -4,9 +4,23 @@ namespace CreationalPatterns.Models
     {
         private Spell _spell;
 
-        public EnchantedRoom(int n, Spell spell): base(n)
+        public EnchantedRoom(int n, Spell spell) : base(n)
         {
             _spell = spell;
         }
+
+        #region Support the Prototype pattern.
+
+        public EnchantedRoom(EnchantedRoom other) : base(other)
+        {
+            _spell = other._spell;
+        }
+
+        public override Room Clone()
+        {
+            return new EnchantedRoom(this);
+        }
+
+        #endregion
     }
 }
