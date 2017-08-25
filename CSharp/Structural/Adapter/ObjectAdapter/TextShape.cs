@@ -1,3 +1,5 @@
+using Structural.Shared;
+
 namespace Structural.Adapter.ObjectAdapter
 {
     public class TextShape : IShape

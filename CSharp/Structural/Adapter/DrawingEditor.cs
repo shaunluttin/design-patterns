@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Structural.Shared;
 
 namespace Structural.Adapter
 {

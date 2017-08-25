@@ -1,4 +1,4 @@
-namespace Structural.Adapter
+namespace Structural.Shared
 {
     public struct Point
     {

@@ -1,3 +1,5 @@
+using Structural.Shared;
+
 namespace Structural.Adapter
 {
     // For the class adapter pattern,

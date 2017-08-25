@@ -6,6 +6,7 @@ namespace Structural
     {
         static void Main(string[] args)
         {
+            var program = new Program();
         }
     }
 }
