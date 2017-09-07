@@ -1,2 +1,3 @@
 # design-patterns
-A repository for us to experiment with design patterns in whatever language and framework.
+
+A repository for us to learn and write about design patterns and principles. 
