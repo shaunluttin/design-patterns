@@ -1,13 +1,15 @@
+using Structural.Shared;
+
 namespace Structural.Adapter
 {
     public class TextView
     {
-        public void GetOrigin(out int x, out int y)
+        public void GetOrigin(out Coord x, out Coord y)
         {
             throw new System.NotImplementedException();
         }
 
-        public void GetExtent(out int width, out int height)
+        public void GetExtent(out Coord width, out Coord height)
         {
             throw new System.NotImplementedException();
         }
