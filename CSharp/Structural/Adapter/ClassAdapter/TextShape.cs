@@ -20,7 +20,7 @@ namespace Structural.Adapter.ClassAdapter
 
         public override bool IsEmpty()
         {
-            throw new System.NotImplementedException();
+            return this.IsEmpty();
         }
 
         public Manipulator CreateManipulator()
@@ -29,18 +29,18 @@ namespace Structural.Adapter.ClassAdapter
         }
 
         /* 
-         * Mimic C++ private inheritance
+         * Use `private new` to mimic C++ private inheritance
          * See https://stackoverflow.com/a/33152/1108891
          */
 
         private new void GetOrigin(out Coord x, out Coord y)
         {
-            (this as TextView).GetOrigin(out x, out y);
+            this.GetOrigin(out x, out y);
         }
 
         private new void GetExtent(out Coord width, out Coord height)
         {
-            (this as TextView).GetExtent(out width, out height);
+            this.GetExtent(out width, out height);
         }
     }
 }
