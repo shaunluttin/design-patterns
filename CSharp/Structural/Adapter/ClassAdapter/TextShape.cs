@@ -3,7 +3,7 @@ using Structural.Shared;
 namespace Structural.Adapter.ClassAdapter
 {
     // "The key to class adapters is to use one inheritance branch to inherit
-    // the interface and another branch to inherit the implementation."
+    // "the interface and another branch to inherit the implementation."
     // (Gamma et al, 1994)
     public class TextShape : TextView, IShape
     {
@@ -18,6 +18,8 @@ namespace Structural.Adapter.ClassAdapter
             topRight = new Point(bottom + height, left + width);
         }
 
+        // "demonstrates the direct forwarding of requests 
+        // "common in adapter implementations". (Gamma et al, 1994)
         public override bool IsEmpty()
         {
             return this.IsEmpty();
