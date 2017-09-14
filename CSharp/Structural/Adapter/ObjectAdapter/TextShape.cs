@@ -13,7 +13,7 @@ namespace Structural.Adapter.ObjectAdapter
 
         public void BoundingBox(out Point bottomLeft, out Point topRight)
         {
-            int bottom, left, height, width = 0;
+            Coord bottom, left, height, width;
 
             _textView.GetOrigin(out bottom, out left);
             _textView.GetExtent(out width, out height);
