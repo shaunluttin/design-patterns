@@ -18,7 +18,7 @@ namespace Structural.Adapter.ClassAdapter
             topRight = new Point(bottom + height, left + width);
         }
 
-        // IsEmpty "demonstrates the direct forwarding of requests 
+        // IsEmpty "demonstrates the direct forwarding of requests
         // common in adapter implementations". (Gamma et al, 1994)
         public override bool IsEmpty()
         {
@@ -32,7 +32,7 @@ namespace Structural.Adapter.ClassAdapter
 
         // To mimic C++ private inheritance,
         // use `private new` to hide the public method,
-        // and delegate to the base class to prevent a StackOverflowException. 
+        // and delegate to the base class to prevent a StackOverflowException.
         private new void GetOrigin(out Coord x, out Coord y)
         {
             base.GetOrigin(out x, out y);

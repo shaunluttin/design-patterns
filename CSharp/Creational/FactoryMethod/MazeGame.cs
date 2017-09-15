@@ -3,7 +3,7 @@ using CreationalPatterns.Models;
 namespace CreationalPatterns.FactoryMethod
 {
     /*
-     * "Maze game provides default implementations that return the 
+     * "Maze game provides default implementations that return the
      * simplest kinds of maze, rooms, walls, and doors." (Gamma et al)
      */
     public class MazeGame

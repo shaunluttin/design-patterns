@@ -5,10 +5,10 @@ namespace CreationalPatterns.Builder
 {
     public class MazeGame
     {
-        /* 
-         * "Notice how the builder hides the internal representation of the 
-         * Maze... This makes it easier to change the way a maze represented, 
-         * since none of the clients of `MazeBuilder` has to be changed." 
+        /*
+         * "Notice how the builder hides the internal representation of the
+         * Maze... This makes it easier to change the way a maze represented,
+         * since none of the clients of `MazeBuilder` has to be changed."
          * (Gamma et al)
          */
         public Maze CreateMaze(MazeBuilder builder)
@@ -21,7 +21,7 @@ namespace CreationalPatterns.Builder
             return builder.GetMaze();
         }
 
-        /* 
+        /*
          * "We can reuse `MazeBuilder` to create different kinds of mazes.
          * The `CreateComplexMaze` operation gives an example."
          * (Gamma et al)

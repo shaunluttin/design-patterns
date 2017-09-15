@@ -1,6 +1,6 @@
 namespace Structural.Shared
 {
-    // The Coord type in the examples appears to 
+    // The Coord type in the examples appears to
     // be a wrapper around an integer value.
     public struct Coord
     {

@@ -5,10 +5,10 @@ namespace CreationalPatterns.NaiveApproach
     public class MazeGame
     {
         /*
-         * "This function is pretty complicated, considering all it does 
-         * is create a maze with two rooms." The problem is its 
-         * inflexibility, because "it hard codes the maze layout." 
-         * (Gamma et al, 1994) 
+         * "This function is pretty complicated, considering all it does
+         * is create a maze with two rooms." The problem is its
+         * inflexibility, because "it hard codes the maze layout."
+         * (Gamma et al, 1994)
          */
         public Maze CreateMaze()
         {

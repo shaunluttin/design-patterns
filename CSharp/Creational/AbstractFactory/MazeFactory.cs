@@ -4,7 +4,7 @@ namespace CreationalPatterns.AbstractFactory
 {
     /*
      * "Note that `MazeFactory` is just a collection of factory methods...
-     * Also note that [it] is not an abstract class; thus it acts as both 
+     * Also note that [it] is not an abstract class; thus it acts as both
      * the AbstractFactory and the ConcreteFactory."
      * (Gamma et al)
      */

@@ -6,7 +6,7 @@ namespace CreationalPatterns.Prototype
     /*
      * "MazePrototypeFactory will be initialized with prototypes of of the
      * objects it will create so that we don't have to subclass it just to
-     * change the classes of the of walls or rooms it creates." 
+     * change the classes of the of walls or rooms it creates."
      * (Gamme et al)
      */
     public class MazePrototypeFactory : MazeFactory

@@ -3,7 +3,7 @@ using Structural.Shared;
 namespace Structural.Bridge
 {
     /*
-     * "The Window class defined the window abstraction 
+     * "The Window class defined the window abstraction
      * for client applications." (Gamma et al)
      */
     public abstract class Window

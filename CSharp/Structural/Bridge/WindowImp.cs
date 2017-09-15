@@ -2,8 +2,8 @@ using System;
 
 namespace Structural.Bridge
 {
-    /* 
-     * "WindowImp, the abstract that declares an interface to the 
+    /*
+     * "WindowImp, the abstract that declares an interface to the
      * underlying window system." (Gamma et al)
      */
     public abstract class WindowImp

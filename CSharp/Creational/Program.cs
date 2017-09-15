@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace CreationalPatterns
 {
@@ -21,8 +21,8 @@ namespace CreationalPatterns
             var maze = mazeGame.CreateMaze();
         }
 
-        /* 
-         * We can now make different kinds of mazes without 
+        /*
+         * We can now make different kinds of mazes without
          * modifying the `CreateMaze` method.
          */
         private void WithAbstractFactory()

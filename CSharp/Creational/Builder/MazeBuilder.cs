@@ -7,7 +7,7 @@ namespace CreationalPatterns.Builder
         /*
          * "All maze-building operations do nothing by default. They're not
          * declared pure virtual [abstract] to let derived classes override
-         * only those methods in which they're interested." (Gamma et al) 
+         * only those methods in which they're interested." (Gamma et al)
          */
         public virtual void BuildMaze() { }
 
