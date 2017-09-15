@@ -14,7 +14,8 @@ namespace CreationalPatterns.AbstractFactory
             return new EnchantedRoom(n, CastSpell());
         }
 
-        public Spell CastSpell() {
+        public Spell CastSpell()
+        {
             return new Spell();
         }
     }

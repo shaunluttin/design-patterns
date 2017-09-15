@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="My Rules" ToolsVersion="14.0">
+  <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
+    <!-- Prefix local calls with this  -->
+    <Rule Id="SA1101" Action="None" />
+    <!-- Do not use regions -->
+    <Rule Id="SA1124" Action="None" />
+    <!-- Element must not be on a single line -->
+    <Rule Id="SA1502" Action="None" />
+    <!-- Field '_instance' must not begin with an underscore -->
+    <Rule Id="SA1309" Action="None" />
+    <!-- Field Names Must Begin With Underscore -->
+    <Rule Id="SX1309" Action="Warning" />
+    <!-- Enable XML documentation output -->
+    <Rule Id="SA1652" Action="None" />
+    <!-- The file header is missing or not located at the top of the file. -->
+    <Rule Id="SA1633" Action="None" />
+  </Rules>
+</RuleSet>

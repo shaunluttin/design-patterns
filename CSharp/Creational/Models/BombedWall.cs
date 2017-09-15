@@ -2,11 +2,13 @@ namespace CreationalPatterns.Models
 {
     public class BombedWall : Wall
     {
-        public BombedWall() : base() { }
+        public BombedWall() 
+        : base() { }
 
         #region Support the Prototype pattern.
 
-        public BombedWall(BombedWall other) : base(other) { }
+        public BombedWall(BombedWall other) 
+        : base(other) { }
 
         /*
          * "Although BombedWall::Clone returns a Wall, its implementation
