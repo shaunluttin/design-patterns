@@ -3,9 +3,9 @@ using Structural.Shared;
 namespace Structural.Adapter.ObjectAdapter
 {
     // "The object adapter requires a little more effort to write, 
-    // "but it's more flexible... the object adapter version... will
-    // "work equally well with subclasses of TextView - the client simply
-    // "passes an instance of a... subclass."
+    // but it's more flexible... the object adapter version... will
+    // work equally well with subclasses of TextView - the client simply
+    // passes an instance of a... subclass."
     public class TextShape : IShape
     {
         private readonly TextView _textView;
