@@ -6,12 +6,14 @@ namespace Structural.Adapter
     {
         public void GetOrigin(out Coord x, out Coord y)
         {
-            throw new System.NotImplementedException();
+            x = 0;
+            y = 0;
         }
 
         public void GetExtent(out Coord width, out Coord height)
         {
-            throw new System.NotImplementedException();
+            width = 0;
+            height = 0;
         }
 
         public virtual bool IsEmpty()

@@ -3,7 +3,7 @@ using Structural.Shared;
 namespace Structural.Adapter.ClassAdapter
 {
     // "The key to class adapters is to use one inheritance branch to inherit
-    // "the interface and another branch to inherit the implementation."
+    // the interface and another branch to inherit the implementation."
     // (Gamma et al, 1994)
     public class TextShape : TextView, IShape
     {
@@ -18,8 +18,8 @@ namespace Structural.Adapter.ClassAdapter
             topRight = new Point(bottom + height, left + width);
         }
 
-        // "demonstrates the direct forwarding of requests 
-        // "common in adapter implementations". (Gamma et al, 1994)
+        // IsEmpty "demonstrates the direct forwarding of requests 
+        // common in adapter implementations". (Gamma et al, 1994)
         public override bool IsEmpty()
         {
             return this.IsEmpty();
@@ -30,19 +30,17 @@ namespace Structural.Adapter.ClassAdapter
             return new TextManipulator(this);
         }
 
-        /* 
-         * Use `private new` to mimic C++ private inheritance
-         * See https://stackoverflow.com/a/33152/1108891
-         */
-
+        // To mimic C++ private inheritance,
+        // use `private new` to hide the public method,
+        // and delegate to the base class to prevent a StackOverflowException. 
         private new void GetOrigin(out Coord x, out Coord y)
         {
-            this.GetOrigin(out x, out y);
+            base.GetOrigin(out x, out y);
         }
 
         private new void GetExtent(out Coord width, out Coord height)
         {
-            this.GetExtent(out width, out height);
+            base.GetExtent(out width, out height);
         }
     }
 }
