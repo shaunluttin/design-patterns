@@ -15,5 +15,7 @@
     <Rule Id="SA1652" Action="None" />
     <!-- The file header is missing or not located at the top of the file. -->
     <Rule Id="SA1633" Action="None" />
+    <!-- Using directive must appear within a namespace declaration -->
+    <Rule Id="SA1200" Action="None" />
   </Rules>
 </RuleSet>
