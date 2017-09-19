@@ -9,7 +9,6 @@ namespace CreationalPatterns.AbstractFactory
             // All we did was:
             // 1. inject a `MazeFactory` and
             // 2. find-replace `new ` with `factory.Make`.
-
             var aMaze = factory.MakeMaze();
             var r1 = factory.MakeRoom(1);
             var r2 = factory.MakeRoom(2);

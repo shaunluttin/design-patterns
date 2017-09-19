@@ -4,6 +4,10 @@ namespace CreationalPatterns.Models
 {
     public class Room : MapSite
     {
+        private MapSite[] _sides = new MapSite[4];
+
+        private int _roomNumber;
+
         public override void Enter()
         {
             Console.WriteLine($"You entered room number ${_roomNumber}.");
@@ -20,10 +24,6 @@ namespace CreationalPatterns.Models
         {
             _roomNumber = roomNo;
         }
-
-        private MapSite[] _sides = new MapSite[4];
-
-        private int _roomNumber;
 
         #region Support the Prototype pattern.
 

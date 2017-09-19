@@ -7,7 +7,6 @@ public class FloppyDisk : Equipment
         this._name = name;
     }
 
-
     public override decimal NetPrice()
     {
         return 100M;

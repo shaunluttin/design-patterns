@@ -1,5 +1,5 @@
-using CreationalPatterns.Models;
 using CreationalPatterns.AbstractFactory;
+using CreationalPatterns.Models;
 
 namespace CreationalPatterns.Prototype
 {

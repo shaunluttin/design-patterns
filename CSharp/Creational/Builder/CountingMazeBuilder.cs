@@ -3,15 +3,9 @@ using CreationalPatterns.Models;
 namespace CreationalPatterns.Builder
 {
     // "This builder doesn't create a maze at all; it just counts different
-    // kinds of components that would have been created.
+    // kinds of components that would have been created." (Gamma et al, 1994)
     public class CountingMazeBuilder : MazeBuilder
     {
-        public class Counts
-        {
-            public int Doors { get; set; }
-            public int Rooms { get; set; }
-        }
-
         private int _doors = 0;
 
         private int _rooms = 0;
@@ -33,6 +27,13 @@ namespace CreationalPatterns.Builder
                 Doors = _doors,
                 Rooms = _rooms
             };
+        }
+
+        public class Counts
+        {
+            public int Doors { get; set; }
+
+            public int Rooms { get; set; }
         }
     }
 }

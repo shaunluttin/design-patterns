@@ -14,6 +14,7 @@ namespace Structural.Adapter
             {
                 shape.BoundingBox(out x, out y);
                 var manipulator = shape.CreateManipulator();
+
                 // do stuff...
                 System.Console.WriteLine("Doing stuff...");
             }

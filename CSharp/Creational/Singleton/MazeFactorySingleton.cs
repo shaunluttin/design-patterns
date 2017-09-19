@@ -1,6 +1,6 @@
 using System;
-using CreationalPatterns.Models;
 using CreationalPatterns.AbstractFactory;
+using CreationalPatterns.Models;
 
 namespace CreationalPatterns.Singleton
 {

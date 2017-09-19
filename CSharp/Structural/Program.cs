@@ -2,23 +2,23 @@ using System;
 
 namespace Structural
 {
-    class Program
+    public class Program
     {
         public static void Main(string[] args)
         {
             var program = new Program();
 
-            program.Adapter();
-            program.Composite();
+            program.WithAdapter();
+            program.WithComposite();
         }
 
-        private void Composite()
+        private void WithComposite()
         {
             var computerAssembler = new Composite.ComputerAssembler();
             computerAssembler.AssembleComputer();
         }
 
-        public void Adapter()
+        private void WithAdapter()
         {
             var editor = new Adapter.DrawingEditor();
 

@@ -8,7 +8,7 @@ public class Bus : CompositeEquipment
         this._name = name;
     }
 
-    public override decimal NetPrice() 
+    public override decimal NetPrice()
     {
         var children = base.NetPrice();
         return children + 100M;

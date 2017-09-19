@@ -1,5 +1,5 @@
-using CreationalPatterns.Models;
 using CreationalPatterns.Builder;
+using CreationalPatterns.Models;
 
 namespace CreationalPatterns.Builder
 {
@@ -29,6 +29,7 @@ namespace CreationalPatterns.Builder
         public Maze CreateComplexMaze(MazeBuilder builder)
         {
             builder.BuildRoom(1);
+
             // ...
             builder.BuildRoom(1001);
 

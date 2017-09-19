@@ -4,14 +4,6 @@ namespace CreationalPatterns.Builder
 {
     public class StandardMazeBuilder : MazeBuilder
     {
-        // "... determines the direction of the common wall between two rooms"
-        // (Gamma et al)
-        private Direction CommonWall(Room room1, Room room2)
-        {
-            // for the sake of this demo, return North every time.
-            return Direction.North;
-        }
-
         private Maze _currentMaze;
 
         public override void BuildMaze()
@@ -45,6 +37,14 @@ namespace CreationalPatterns.Builder
         public override Maze GetMaze()
         {
             return _currentMaze;
+        }
+
+        // "... determines the direction of the common wall between two rooms"
+        // (Gamma et al)
+        private Direction CommonWall(Room room1, Room room2)
+        {
+            // for the sake of this demo, return North every time.
+            return Direction.North;
         }
     }
 }
