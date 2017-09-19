@@ -1,10 +1,10 @@
 public class Card : Equipment
 {
-    private string v;
+    private string _name;
 
-    public Card(string v)
+    public Card(string name)
     {
-        this.v = v;
+        this._name = name;
     }
 
     public override decimal NetPrice()

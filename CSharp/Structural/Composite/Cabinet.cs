@@ -4,11 +4,11 @@ using System;
 
 public class Cabinet : CompositeEquipment
 {
-    private string v;
+    private string _name;
 
-    public Cabinet(string v)
+    public Cabinet(string name)
     {
-        this.v = v;
+        this._name = name;
     }
 
     public override decimal NetPrice() 

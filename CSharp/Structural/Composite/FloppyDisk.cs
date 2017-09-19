@@ -1,10 +1,10 @@
 public class FloppyDisk : Equipment
 {
-    private string v;
+    private string _name;
 
-    public FloppyDisk(string v)
+    public FloppyDisk(string name)
     {
-        this.v = v;
+        this._name = name;
     }
 
 
