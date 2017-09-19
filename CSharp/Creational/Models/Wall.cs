@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace CreationalPatterns.Models
 {
@@ -13,6 +14,10 @@ namespace CreationalPatterns.Models
 
         #region Support the Prototype pattern.
 
+        [SuppressMessage(
+            "StyleCop.Analyzers",
+            "SA1201:ElementsMustAppearInTheCorrectOrder",
+            Justification = "Support the use of regions.")]
         public Wall(Wall other) { }
 
         public virtual Wall Clone()

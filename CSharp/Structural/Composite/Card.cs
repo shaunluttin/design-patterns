@@ -1,14 +1,13 @@
 public class Card : Equipment
 {
-    private string _name;
-
-    public Card(string name)
+    public Card(string name, decimal netPriceAlone)
     {
-        this._name = name;
+        Name = name;
+        NetPriceAlone = netPriceAlone;
     }
 
     public override decimal NetPrice()
     {
-        return 100M;
+        return NetPriceAlone;
     }
 }

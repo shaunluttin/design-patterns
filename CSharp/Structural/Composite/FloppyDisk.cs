@@ -1,14 +1,13 @@
 public class FloppyDisk : Equipment
 {
-    private string _name;
-
-    public FloppyDisk(string name)
+    public FloppyDisk(string name, decimal netPriceAlone)
     {
-        this._name = name;
+        Name = name;
+        NetPriceAlone = netPriceAlone;
     }
 
     public override decimal NetPrice()
     {
-        return 100M;
+        return NetPriceAlone;
     }
 }

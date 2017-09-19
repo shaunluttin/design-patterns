@@ -1,16 +1,15 @@
 // "... a bus can contain cards..." (Gamma et al, 1994)
 public class Bus : CompositeEquipment
 {
-    private string _name;
-
-    public Bus(string name)
+    public Bus(string name, decimal netPriceAlone)
     {
-        this._name = name;
+        Name = name;
+        NetPriceAlone = netPriceAlone;
     }
 
     public override decimal NetPrice()
     {
         var children = base.NetPrice();
-        return children + 100M;
+        return children + NetPriceAlone;
     }
 }

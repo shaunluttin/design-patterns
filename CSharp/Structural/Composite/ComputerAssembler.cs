@@ -5,25 +5,21 @@ namespace Composite
         // The AssembleComputer class is the client for the composite pattern.
         public void AssembleComputer()
         {
-            var cabinet = new Cabinet("PC Cabinet");
-            var chassis = new Chassis("PC Chassis");
+            var cabinet = new Cabinet("PC Cabinet", 25M);
+            var chassis = new Chassis("PC Chassis", 50M);
 
             cabinet.Add(chassis);
 
-            var bus = new Bus("MCA Bus");
-            bus.Add(new Card("16 Mbs Token Ring"));
+            var bus = new Bus("MCA Bus", 100M);
+            bus.Add(new Card("16 Mbs Token Ring", 100M));
             chassis.Add(bus);
 
-            chassis.Add(new FloppyDisk("3.5 in Floppy"));
+            chassis.Add(new FloppyDisk("3.5 in Floppy", 100M));
 
-            // cabinet              $100
-            //   chassis            $100
-            //     bus              $100
-            //       card           $100
-            //   floppy disc        $100
-            //                      ----
-            //                      $500
-            System.Console.WriteLine($"The net price is {cabinet.NetPrice()}");
+            // cabinet
+            //   > chassis > bus > card
+            //   > floppy disc
+            System.Console.WriteLine($"The net price is ${cabinet.NetPrice()}");
         }
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 
 namespace CreationalPatterns.Models
@@ -27,6 +28,10 @@ namespace CreationalPatterns.Models
 
         #region Support the Prototype pattern.
 
+        [SuppressMessage(
+            "StyleCop.Analyzers",
+            "SA1201:ElementsMustAppearInTheCorrectOrder",
+            Justification = "Support the use of regions.")]
         public Maze(Maze other)
         {
             _rooms = other._rooms;
