@@ -9,6 +9,13 @@ namespace Structural
             var program = new Program();
 
             program.Adapter();
+            program.Composite();
+        }
+
+        private void Composite()
+        {
+            var computerAssembler = new Composite.ComputerAssembler();
+            computerAssembler.AssembleComputer();
         }
 
         public void Adapter()

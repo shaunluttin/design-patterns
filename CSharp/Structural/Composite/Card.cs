@@ -9,6 +9,6 @@ public class Card : Equipment
 
     public override decimal NetPrice()
     {
-        throw new System.NotImplementedException();
+        return 100M;
     }
 }

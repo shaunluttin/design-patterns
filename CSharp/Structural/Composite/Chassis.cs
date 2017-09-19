@@ -7,9 +7,10 @@ public class Chassis : CompositeEquipment
     {
         this.v = v;
     }
-
-    public override decimal NetPrice()
+    
+    public override decimal NetPrice() 
     {
-        throw new System.NotImplementedException();
+        var children = base.NetPrice();
+        return children + 100M;
     }
 }
