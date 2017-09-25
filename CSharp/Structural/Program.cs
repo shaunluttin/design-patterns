@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Structural
 {
@@ -7,10 +9,46 @@ namespace Structural
         public static void Main(string[] args)
         {
             var program = new Program();
+            program.ReceiveInput();
+        }
 
-            program.WithAdapter();
-            program.WithComposite();
-            program.WithDecorator();
+        private void ReceiveInput()
+        {
+            var dictionary = new Dictionary<string, Action>();
+            dictionary.Add("Adapter", () => WithAdapter());
+            dictionary.Add("Composite", () => WithComposite());
+            dictionary.Add("Decorator", () => WithDecorator());
+
+            while (true)
+            {
+                Console.WriteLine("Choose a demos to run by its first letter(s):");
+                Console.WriteLine();
+
+                foreach (var pair in dictionary)
+                {
+                    Console.WriteLine($"{pair.Key}");
+                }
+
+                Console.WriteLine();
+                Console.Write(">");
+                var response = Console.ReadLine();
+
+                var choices = dictionary
+                    .Where((pair) => pair.Key.StartsWith(response));
+
+                if (choices.Count() == 1)
+                {
+                    var choice = choices.First();
+                    Console.WriteLine("+++++++++++++++");
+                    Console.WriteLine($"Running {choice.Key}");
+
+                    Console.WriteLine();
+                    choice.Value();
+                    Console.WriteLine();
+
+                    Console.WriteLine("+++++++++++++++");
+                }
+            }
         }
 
         private void WithDecorator()
@@ -18,7 +56,10 @@ namespace Structural
             var window = new Decorator.Window();
             var textView = new Decorator.TextView();
 
-            window.SetContents(textView);
+            window.SetContents(
+                new Decorator.BorderDecorator(
+                    new Decorator.ScrollDecorator(textView), 1));
+
             window.Draw();
         }
 
