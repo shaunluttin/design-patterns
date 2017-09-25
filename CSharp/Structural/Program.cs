@@ -10,6 +10,16 @@ namespace Structural
 
             program.WithAdapter();
             program.WithComposite();
+            program.WithDecorator();
+        }
+
+        private void WithDecorator()
+        {
+            var window = new Decorator.Window();
+            var textView = new Decorator.TextView();
+
+            window.SetContents(textView);
+            window.Draw();
         }
 
         private void WithComposite()
