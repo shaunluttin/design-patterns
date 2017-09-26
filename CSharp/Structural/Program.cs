@@ -9,47 +9,9 @@ namespace Structural
         public static void Main(string[] args)
         {
             var program = new Program();
-            program.RunDemo();
-        }
-
-        // TODO: Share this routine with the other Program.cs files.
-        private void RunDemo()
-        {
-            var dictionary = new Dictionary<string, Action>();
-            dictionary.Add("Adapter", () => WithAdapter());
-            dictionary.Add("Composite", () => WithComposite());
-            dictionary.Add("Decorator", () => WithDecorator());
-
-            while (true)
-            {
-                Console.WriteLine("Choose a demo to run by its first letter(s):");
-                Console.WriteLine();
-
-                foreach (var pair in dictionary)
-                {
-                    Console.WriteLine($"{pair.Key}");
-                }
-
-                Console.WriteLine();
-                Console.Write(">");
-                var response = Console.ReadLine();
-
-                var choices = dictionary
-                    .Where((pair) => pair.Key.StartsWith(response));
-
-                if (choices.Count() == 1)
-                {
-                    var choice = choices.First();
-                    Console.WriteLine("+++++++++++++++");
-                    Console.WriteLine($"Running {choice.Key}");
-
-                    Console.WriteLine();
-                    choice.Value();
-                    Console.WriteLine();
-
-                    Console.WriteLine("+++++++++++++++");
-                }
-            }
+            program.WithAdapter();
+            program.WithComposite();
+            program.WithDecorator();
         }
 
         private void WithDecorator()
