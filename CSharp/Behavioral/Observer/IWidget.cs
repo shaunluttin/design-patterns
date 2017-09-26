@@ -1,6 +1,6 @@
 namespace Behavioral.Observer
 {
-    public interface Widget 
+    public interface IWidget
     {
         void Draw();
     }

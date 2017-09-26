@@ -2,11 +2,11 @@ using System;
 
 namespace Behavioral.Observer
 {
-    public class AnalogClock : Observer, Widget
+    public class AnalogClock : Observer, IWidget
     {
         private ClockTimer _subject;
 
-        protected AnalogClock(ClockTimer s)
+        public AnalogClock(ClockTimer s)
         {
             _subject = s;
             _subject.Attach(this);
@@ -24,7 +24,8 @@ namespace Behavioral.Observer
         {
             var hour = _subject.GetHour();
             var minute = _subject.GetMinute();
-            Console.WriteLine($"{hour} {minute}");
+            var second = _subject.GetSecond();
+            Console.WriteLine($"{hour}:{minute}:{second}");
         }
     }
 }

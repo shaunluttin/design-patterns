@@ -4,14 +4,28 @@ namespace Behavioral.Observer
 {
     public class ClockTimer : Subject
     {
-        internal object GetHour()
+        public ClockTimer()
         {
-            throw new NotImplementedException();
+            var timer = new System.Threading.Timer(
+                (e) => Notify(),
+                null,
+                System.TimeSpan.Zero,
+                System.TimeSpan.FromSeconds(1));
         }
 
-        internal object GetMinute()
+        internal int GetHour()
         {
-            throw new NotImplementedException();
+            return DateTime.Now.Hour;
+        }
+
+        internal int GetMinute()
+        {
+            return DateTime.Now.Minute;
+        }
+
+        internal int GetSecond()
+        {
+            return DateTime.Now.Second;
         }
     }
 }
