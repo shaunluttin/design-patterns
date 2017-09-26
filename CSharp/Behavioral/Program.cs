@@ -9,9 +9,17 @@ namespace Behavioral
             var program = new Program();
 
             program.WithObserver();
+            program.WithStrategy();
 
             // prevent program exit so we can view the observer's timer.
             System.Diagnostics.Process.GetCurrentProcess().WaitForExit();
+        }
+
+        private void WithStrategy()
+        {
+            var quick = new Strategy.Composition(new Strategy.SimpleCompositor());
+            var slick = new Strategy.Composition(new Strategy.TeXCompositor());
+            var iconic = new Strategy.Composition(new Strategy.ArrayCompositor());
         }
 
         private void WithObserver()

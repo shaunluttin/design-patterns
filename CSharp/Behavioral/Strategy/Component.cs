@@ -4,6 +4,10 @@ namespace Behavioral.Strategy
     // (Gamma et al, 1994)
     public class Component
     {
+        public int NaturalSize { get; set; }
 
+        public int Stretchability { get; set; }
+
+        public int Shrinkability { get; set; }
     }
 }
