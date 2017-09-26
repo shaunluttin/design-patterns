@@ -16,12 +16,12 @@ namespace Behavioral.TemplateMethod
             ResetFocus();
         }
 
+        protected abstract void DoDisplay();
+
         private void ResetFocus()
         {
             Console.WriteLine("Resetting the focus...");
         }
-
-        protected abstract void DoDisplay();
 
         private void SetFocus()
         {

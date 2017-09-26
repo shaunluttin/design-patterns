@@ -4,13 +4,25 @@ namespace Behavioral
 {
     public class Program
     {
+        private DemoRunner.Runner _runner;
+
+        public Program(DemoRunner.Runner runner)
+        {
+            _runner = runner;
+            _runner.Add("Observer", () => WithObserver());
+            _runner.Add("Strategy", () => WithStrategy());
+            _runner.Add("Template Method", () => WithTemplateMethod());
+        }
+
+        public void Run()
+        {
+            _runner.Run();
+        }
+
         public static void Main(string[] args)
         {
-            var program = new Program();
-
-            program.WithObserver();
-            program.WithStrategy();
-            program.WithTemplateMethod();
+            var program = new Program(new DemoRunner.Runner());
+            program.Run();
 
             // prevent program exit so we can view the observer's timer.
             System.Diagnostics.Process.GetCurrentProcess().WaitForExit();
