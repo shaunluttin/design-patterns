@@ -9,10 +9,10 @@ namespace Structural
         public static void Main(string[] args)
         {
             var program = new Program();
-            program.ReceiveInput();
+            program.RunDemo();
         }
 
-        private void ReceiveInput()
+        private void RunDemo()
         {
             var dictionary = new Dictionary<string, Action>();
             dictionary.Add("Adapter", () => WithAdapter());
@@ -21,7 +21,7 @@ namespace Structural
 
             while (true)
             {
-                Console.WriteLine("Choose a demos to run by its first letter(s):");
+                Console.WriteLine("Choose a demo to run by its first letter(s):");
                 Console.WriteLine();
 
                 foreach (var pair in dictionary)
