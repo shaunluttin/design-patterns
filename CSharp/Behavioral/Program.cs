@@ -10,9 +10,16 @@ namespace Behavioral
 
             program.WithObserver();
             program.WithStrategy();
+            program.WithTemplateMethod();
 
             // prevent program exit so we can view the observer's timer.
             System.Diagnostics.Process.GetCurrentProcess().WaitForExit();
+        }
+
+        private void WithTemplateMethod()
+        {
+            var myView = new TemplateMethod.MyView();
+            myView.Display();
         }
 
         private void WithStrategy()
