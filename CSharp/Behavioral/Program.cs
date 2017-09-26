@@ -10,6 +10,7 @@ namespace Behavioral
 
             program.WithObserver();
 
+            // prevent program exit so we can view the observer's timer.
             System.Diagnostics.Process.GetCurrentProcess().WaitForExit();
         }
 
