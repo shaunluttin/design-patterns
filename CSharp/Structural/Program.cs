@@ -12,6 +12,7 @@ namespace Structural
             program.RunDemo();
         }
 
+        // TODO: Share this routine with the other Program.cs files.
         private void RunDemo()
         {
             var dictionary = new Dictionary<string, Action>();

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Structural.Decorator 
+namespace Structural.Decorator
 {
     public class Window
     {
@@ -14,7 +14,7 @@ namespace Structural.Decorator
 
         public void Draw()
         {
-            foreach(var c in _contents)
+            foreach (var c in _contents)
             {
                 c.Draw();
             }

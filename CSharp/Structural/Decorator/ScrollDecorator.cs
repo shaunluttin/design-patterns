@@ -7,7 +7,7 @@ namespace Structural.Decorator
         {
         }
 
-        public override void Draw() 
+        public override void Draw()
         {
             base.Draw();
             DrawScrollbar();

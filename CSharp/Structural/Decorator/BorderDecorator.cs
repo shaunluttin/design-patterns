@@ -4,12 +4,12 @@ namespace Structural.Decorator
 {
     public class BorderDecorator : Decorator
     {
-        public BorderDecorator(VisualComponent component, int borderWidth) 
+        public BorderDecorator(VisualComponent component, int borderWidth)
         : base(component)
         {
         }
 
-        public override void Draw() 
+        public override void Draw()
         {
             base.Draw();
             DrawBorder();
