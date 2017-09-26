@@ -1,21 +1,20 @@
 using System;
+using System.Collections.Generic;
 
-namespace CreationalPatterns
+namespace Creational
 {
-    public class Program
+    public class Demo
     {
-        public static void Main(string[] args)
+        public static Dictionary<string, Action> Demos = new Dictionary<string, Action>
         {
-            var program = new Program();
+            { "Naive", () => Creational.Demo.WithNaiveApproach() },
+            { "AbstractFactory", () => Creational.Demo.WithAbstractFactory() },
+            { "Builder", () => Creational.Demo.WithBuilder() },
+            { "FactoryMethod", () => Creational.Demo.WithFactoryMethod() },
+            { "Singleton", () => Creational.Demo.WithSingleton() },
+        };
 
-            program.WithNaiveApproach();
-            program.WithAbstractFactory();
-            program.WithBuilder();
-            program.WithFactoryMethod();
-            program.WithSingleton();
-        }
-
-        private void WithNaiveApproach()
+        private static void WithNaiveApproach()
         {
             var mazeGame = new NaiveApproach.MazeGame();
             var maze = mazeGame.CreateMaze();
@@ -25,7 +24,7 @@ namespace CreationalPatterns
          * We can now make different kinds of mazes without
          * modifying the `CreateMaze` method.
          */
-        private void WithAbstractFactory()
+        private static void WithAbstractFactory()
         {
             var mazeGame = new AbstractFactory.MazeGame();
 
@@ -39,7 +38,7 @@ namespace CreationalPatterns
             var enchantedMaze = mazeGame.CreateMaze(enchantedMazeFactory);
         }
 
-        private void WithBuilder()
+        private static void WithBuilder()
         {
             var mazeGame = new Builder.MazeGame();
 
@@ -53,7 +52,7 @@ namespace CreationalPatterns
             Console.WriteLine($"The maze has {counts.Rooms} rooms and {counts.Doors} doors.");
         }
 
-        private void WithFactoryMethod()
+        private static void WithFactoryMethod()
         {
             var defaultMazeGame = new FactoryMethod.MazeGame();
             var defaultMaze = defaultMazeGame.CreateMaze();
@@ -65,7 +64,7 @@ namespace CreationalPatterns
             var bombedMaze = bombedMazeGame.CreateMaze();
         }
 
-        private void WithSingleton()
+        private static void WithSingleton()
         {
             var mazeGame = new Singleton.MazeGame();
 

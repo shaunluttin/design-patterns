@@ -1,4 +1,4 @@
-namespace CreationalPatterns.Models
+namespace Creational.Models
 {
     public class RoomWithABomb : Room
     {

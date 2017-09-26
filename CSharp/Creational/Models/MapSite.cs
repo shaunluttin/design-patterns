@@ -1,6 +1,6 @@
 using System;
 
-namespace CreationalPatterns.Models
+namespace Creational.Models
 {
     /*
      * "The common abstract class for all the components of the maze." (Gamma et al, 1994)

@@ -1,7 +1,7 @@
-using CreationalPatterns.AbstractFactory;
-using CreationalPatterns.Models;
+using Creational.AbstractFactory;
+using Creational.Models;
 
-namespace CreationalPatterns.Prototype
+namespace Creational.Prototype
 {
     /*
      * "MazePrototypeFactory will be initialized with prototypes of of the

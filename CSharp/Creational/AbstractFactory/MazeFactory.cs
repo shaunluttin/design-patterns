@@ -1,6 +1,6 @@
-using CreationalPatterns.Models;
+using Creational.Models;
 
-namespace CreationalPatterns.AbstractFactory
+namespace Creational.AbstractFactory
 {
     /*
      * "Note that `MazeFactory` is just a collection of factory methods...

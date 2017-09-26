@@ -1,6 +1,6 @@
-using CreationalPatterns.Models;
+using Creational.Models;
 
-namespace CreationalPatterns.AbstractFactory
+namespace Creational.AbstractFactory
 {
     public class EnchantedMazeFactory : MazeFactory
     {

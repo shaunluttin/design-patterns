@@ -1,6 +1,6 @@
-using CreationalPatterns.Models;
+using Creational.Models;
 
-namespace CreationalPatterns.Builder
+namespace Creational.Builder
 {
     // "This builder doesn't create a maze at all; it just counts different
     // kinds of components that would have been created." (Gamma et al, 1994)

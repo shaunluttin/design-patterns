@@ -1,7 +1,7 @@
-using CreationalPatterns.Builder;
-using CreationalPatterns.Models;
+using Creational.Builder;
+using Creational.Models;
 
-namespace CreationalPatterns.Builder
+namespace Creational.Builder
 {
     public class MazeGame
     {

@@ -1,6 +1,6 @@
-using CreationalPatterns.Models;
+using Creational.Models;
 
-namespace CreationalPatterns.Singleton
+namespace Creational.Singleton
 {
     public class MazeGame
     {

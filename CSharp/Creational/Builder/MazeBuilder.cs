@@ -1,6 +1,6 @@
-using CreationalPatterns.Models;
+using Creational.Models;
 
-namespace CreationalPatterns.Builder
+namespace Creational.Builder
 {
     public abstract class MazeBuilder
     {

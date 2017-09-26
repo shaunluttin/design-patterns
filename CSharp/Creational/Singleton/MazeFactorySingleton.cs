@@ -1,8 +1,8 @@
 using System;
-using CreationalPatterns.AbstractFactory;
-using CreationalPatterns.Models;
+using Creational.AbstractFactory;
+using Creational.Models;
 
-namespace CreationalPatterns.Singleton
+namespace Creational.Singleton
 {
     public class MazeFactorySingleton : MazeFactory
     {

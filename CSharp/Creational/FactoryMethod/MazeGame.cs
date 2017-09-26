@@ -1,6 +1,6 @@
-using CreationalPatterns.Models;
+using Creational.Models;
 
-namespace CreationalPatterns.FactoryMethod
+namespace Creational.FactoryMethod
 {
     /*
      * "Maze game provides default implementations that return the

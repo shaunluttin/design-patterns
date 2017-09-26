@@ -1,6 +1,6 @@
-using CreationalPatterns.Models;
+using Creational.Models;
 
-namespace CreationalPatterns.NaiveApproach
+namespace Creational.NaiveApproach
 {
     public class MazeGame
     {

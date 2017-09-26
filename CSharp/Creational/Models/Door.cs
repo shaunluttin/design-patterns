@@ -1,7 +1,7 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
 
-namespace CreationalPatterns.Models
+namespace Creational.Models
 {
     public class Door : MapSite
     {

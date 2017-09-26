@@ -1,6 +1,6 @@
-using CreationalPatterns.Models;
+using Creational.Models;
 
-namespace CreationalPatterns.FactoryMethod
+namespace Creational.FactoryMethod
 {
     public class EnchantedMazeGame : MazeGame
     {
