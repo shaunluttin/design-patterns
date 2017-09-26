@@ -28,12 +28,12 @@ namespace DemoRunner
                 }
 
                 Console.Write(">");
-                var response = Console.ReadLine();
+                var userInput = Console.ReadLine();
 
-                int result;
-                if (!int.TryParse(response, out result) || result >= keys.Count())
+                int selectedIndex;
+                if (!int.TryParse(userInput, out selectedIndex) || selectedIndex >= keys.Count())
                 {
-                    Console.WriteLine($"{response} is not between 0 and {keys.Count() - 1}.");
+                    Console.WriteLine($"{userInput} is not a number between 0 and {keys.Count() - 1}.");
                     Console.WriteLine();
                     continue;
                 }
@@ -41,7 +41,7 @@ namespace DemoRunner
                 Console.WriteLine("++++++++++++++++");
                 Console.WriteLine();
 
-                var choice = keys[result];
+                var choice = keys[selectedIndex];
                 Console.WriteLine("Running " + choice);
                 var action = _demosToRun[choice];
                 action();

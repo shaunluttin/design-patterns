@@ -1,18 +1,15 @@
 using System;
+using System.Threading;
 
 namespace Behavioral.Observer
 {
     public class ClockTimer : Subject
     {
-        private System.Threading.Timer _timer;
+        private Timer _timer;
 
         public ClockTimer()
         {
-            _timer = new System.Threading.Timer(
-                (e) => Notify(),
-                null,
-                System.TimeSpan.Zero,
-                System.TimeSpan.FromSeconds(1));
+            _timer = new Timer((s) => Notify(), null, 0, 1000);
         }
 
         public void Dispose() 
