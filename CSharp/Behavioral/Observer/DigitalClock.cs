@@ -25,7 +25,7 @@ namespace Behavioral.Observer
             var hour = _subject.GetHour();
             var minute = _subject.GetMinute();
             var second = _subject.GetSecond();
-            Console.WriteLine($"{hour}-{minute}-{second}");
+            Console.WriteLine($"D {hour}-{minute}-{second}");
         }
     }
 }

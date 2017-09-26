@@ -20,6 +20,10 @@ namespace Behavioral
             var quick = new Strategy.Composition(new Strategy.SimpleCompositor());
             var slick = new Strategy.Composition(new Strategy.TeXCompositor());
             var iconic = new Strategy.Composition(new Strategy.ArrayCompositor());
+
+            quick.Repair();
+            slick.Repair();
+            iconic.Repair();
         }
 
         private void WithObserver()

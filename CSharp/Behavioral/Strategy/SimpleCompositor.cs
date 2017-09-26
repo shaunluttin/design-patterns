@@ -7,6 +7,8 @@ namespace Behavioral.Strategy
         // taking only their natural widths into consideration..."
         public override int Compose(Coord[] natural, Coord[] stretch, Coord[] shrink, int componentCount, int lineWidth, int[] breaks)
         {
+            System.Console.WriteLine("Composing with the Simple algorithm...");
+
             var breakCount = 100;
             return breakCount;
         }
