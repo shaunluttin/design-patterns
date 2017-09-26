@@ -20,7 +20,7 @@ namespace Behavioral.Observer
         {
             foreach (var observer in _observers)
             {
-                observer.Update(this);    
+                observer.Update(this);
             }
         }
     }
