@@ -4,13 +4,20 @@ namespace Behavioral.Observer
 {
     public class ClockTimer : Subject
     {
+        private System.Threading.Timer _timer;
+
         public ClockTimer()
         {
-            var timer = new System.Threading.Timer(
+            _timer = new System.Threading.Timer(
                 (e) => Notify(),
                 null,
                 System.TimeSpan.Zero,
                 System.TimeSpan.FromSeconds(1));
+        }
+
+        public void Dispose() 
+        {
+            _timer.Dispose();
         }
 
         internal int GetHour()

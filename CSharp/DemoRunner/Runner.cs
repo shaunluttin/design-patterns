@@ -6,53 +6,58 @@ namespace DemoRunner
 {
     public class Runner
     {
-        Dictionary<string, Action> demosToRun = 
-            new Dictionary<string, Action>();
+        private Dictionary<string, Action> _demosToRun = new Dictionary<string, Action>();
 
-        public void Add(string name, Action demoToRun) 
+        public Action Stop { get; set; }
+
+        public void Add(string name, Action demoToRun)
         {
-            demosToRun.Add(name, demoToRun);
+            _demosToRun.Add(name, demoToRun);
         }
 
-        public void Run()
+        public void Start()
         {
-            while(true) 
+            while (true)
             {
-                Console.WriteLine("Please select the demo to run:");
+                Console.WriteLine("Select a demo to run (Ctrl + C to quit):");
 
-                foreach (var demo in demosToRun)
+                var keys = _demosToRun.Keys.ToList();
+                for (var i = 0; i < keys.Count(); i = i + 1)
                 {
-                    Console.WriteLine(demo.Key);
+                    Console.WriteLine(i + ":" + keys[i]);
                 }
 
                 Console.Write(">");
                 var response = Console.ReadLine();
 
-                var choices = demosToRun.Keys.Where((key) => key.StartsWith(response));
-
-                if (choices.Count() > 1)
+                int result;
+                if (!int.TryParse(response, out result) || result >= keys.Count())
                 {
-                    Console.WriteLine("Please disambiguate between...");
-                    break;
+                    Console.WriteLine($"{response} is not between 0 and {keys.Count() - 1}.");
+                    Console.WriteLine();
+                    continue;
                 }
-
-                if (choices.Count() == 0) 
-                {
-                    Console.WriteLine("Please use a letter that starts with...");
-                    break;
-                }
-
-                var choice = choices.Single();
 
                 Console.WriteLine("++++++++++++++++");
                 Console.WriteLine();
 
+                var choice = keys[result];
                 Console.WriteLine("Running " + choice);
-                var action = demosToRun[choice];
+                var action = _demosToRun[choice];
                 action();
 
                 Console.WriteLine();
+
+                Console.WriteLine("Press any key to continue");
+                Console.ReadKey();
+
+                if (Stop != null)
+                {
+                    Stop();
+                }
+
                 Console.WriteLine("++++++++++++++++");
+                Console.WriteLine();
             }
         }
     }

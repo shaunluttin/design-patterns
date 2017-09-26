@@ -12,20 +12,12 @@ namespace Behavioral
             _runner.Add("Observer", () => WithObserver());
             _runner.Add("Strategy", () => WithStrategy());
             _runner.Add("Template Method", () => WithTemplateMethod());
-        }
-
-        public void Run()
-        {
-            _runner.Run();
+            _runner.Start();
         }
 
         public static void Main(string[] args)
         {
             var program = new Program(new DemoRunner.Runner());
-            program.Run();
-
-            // prevent program exit so we can view the observer's timer.
-            System.Diagnostics.Process.GetCurrentProcess().WaitForExit();
         }
 
         private void WithTemplateMethod()
@@ -50,6 +42,8 @@ namespace Behavioral
             var timer = new Observer.ClockTimer();
             var analogClock = new Observer.AnalogClock(timer);
             var digitalClock = new Observer.DigitalClock(timer);
+
+            _runner.Stop = () => timer.Dispose();
         }
     }
 }
