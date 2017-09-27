@@ -1,14 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Diagnostics;
 
 namespace DemoRunner
 {
+    public class MyListener : TextWriterTraceListener
+    {
+        public MyListener(System.IO.TextWriter t) 
+        : base(t) {}
+
+        public override void Write(string message) 
+        {
+            Writer.Write("Trace:");
+        }
+
+        public override void WriteLine(string message) 
+        {
+            Writer.WriteLine(message);
+        }
+    }
+
     public class Runner
     {
         private Dictionary<string, Action> _demosToRun = new Dictionary<string, Action>();
 
         public Action Stop { get; set; }
+
+        public Runner()
+        {
+            var listener = new MyListener(Console.Out);
+            listener.IndentLevel = 5;
+
+            Trace.Listeners.Clear();
+            Trace.Listeners.Add(listener);
+        }
 
         public void Add(string name, Action demoToRun)
         {

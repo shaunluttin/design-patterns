@@ -25,6 +25,8 @@ namespace Behavioral.Observer
             var hour = _subject.GetHour();
             var minute = _subject.GetMinute();
             var second = _subject.GetSecond();
+
+            // We're using Console to represent a View.
             Console.WriteLine($"A {hour}:{minute}:{second}");
         }
     }

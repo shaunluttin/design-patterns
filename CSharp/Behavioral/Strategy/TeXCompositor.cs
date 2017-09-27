@@ -8,7 +8,7 @@ namespace Behavioral.Strategy
         // (Gamma et al, 1994)
         public override int Compose(Coord[] natural, Coord[] stretch, Coord[] shrink, int componentCount, int lineWidth, int[] breaks)
         {
-            System.Console.WriteLine("Composing with the TeX algorithm...");
+            System.Diagnostics.Trace.TraceInformation("Composing with the TeX algorithm...");
 
             var breakCount = 100;
             return breakCount;
