@@ -9,9 +9,9 @@ namespace Behavioral
         public Program(DemoRunner.Runner runner)
         {
             _runner = runner;
-            _runner.Add("Observer", () => WithObserver());
+            _runner.Add("Observer", () => WithTemplateMethod());
             _runner.Add("Strategy", () => WithStrategy());
-            _runner.Add("Template Method", () => WithTemplateMethod());
+            _runner.Add("Template Method", () => WithObserver());
             _runner.Start();
         }
 

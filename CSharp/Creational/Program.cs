@@ -4,15 +4,22 @@ namespace CreationalPatterns
 {
     public class Program
     {
+        private DemoRunner.Runner _runner;
+
+        public Program(DemoRunner.Runner runner)
+        {
+            _runner = runner;
+            _runner.Add("Naive Approach", () => WithNaiveApproach());
+            _runner.Add("Abstract Factory", () => WithAbstractFactory());
+            _runner.Add("Builder", () => WithBuilder());
+            _runner.Add("Factory Method", () => WithFactoryMethod());
+            _runner.Add("Singleton", () => WithSingleton());
+            _runner.Start();
+        }
+
         public static void Main(string[] args)
         {
-            var program = new Program();
-
-            program.WithNaiveApproach();
-            program.WithAbstractFactory();
-            program.WithBuilder();
-            program.WithFactoryMethod();
-            program.WithSingleton();
+            var program = new Program(new DemoRunner.Runner());
         }
 
         private void WithNaiveApproach()
