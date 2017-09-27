@@ -2,8 +2,8 @@
 
 * [CSharp Examples](CSharp/)
 * [TypeScript Examples](TypeScript/)
-* [Articles](articles)
-* [Presentation](LaTex/design-patterns-15min.pdf)
+* [Articles](articles/)
+* [Presentation](LaTeX/design-patterns-15min.pdf)
 
 The other content is less organized and is mostly my own notes.
 
