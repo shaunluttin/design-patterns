@@ -1,9 +1,9 @@
 # Primary Content
 
-* [CSharp Examples](CSharp/)
-* [TypeScript Examples](TypeScript/)
-* [Articles](articles/)
-* [Presentation](LaTeX/design-patterns-15min.pdf)
+* [CSharp Examples](CSharp/). Our conversion of some Gang of Four design patterns into C#. 
+* [TypeScript Examples](TypeScript/). The same but into TypeScript.
+* [Articles](articles/). PDFs of articles that we have found useful.
+* [Presentation](LaTeX/design-patterns-15min.pdf). Our 15-minute presention on design principles.
 
 The other content is less organized and is mostly my own notes.
 
