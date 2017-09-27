@@ -1,8 +1,8 @@
-This directory contains C# implementations of Gang of Four Design Patterns.
+C# implementations of Gang of Four Design Patterns.
 
-The samples are in C# and, where appropriate, adhere to the original C++ implementations.
+We have tried keep the spirit of the original implementations.
 
-The demos are runnable with .NET Core. E.g.
+Demos are runnable with .NET Core. E.g.
 
 ```
 cd Behavioral
