@@ -1,7 +1,7 @@
 namespace Structural.Shared
 {
-    // The Coord type in the examples appears to
-    // be a wrapper around an integer value.
+    // TODO: Verify the structure of the Coord in the Design Patterns book.
+    // In the sample code, Coord appears to be a wrapper around an integer value.
     public struct Coord
     {
         private int _value;
