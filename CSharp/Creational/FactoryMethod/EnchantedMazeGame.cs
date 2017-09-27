@@ -14,7 +14,7 @@ namespace CreationalPatterns.FactoryMethod
             return new DoorNeedingSpell(room1, room2);
         }
 
-        private Spell CastSpell()
+        public Spell CastSpell()
         {
             return new Spell();
         }
