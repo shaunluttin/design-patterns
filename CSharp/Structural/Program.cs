@@ -1,17 +1,26 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using DemoRunner;
 
 namespace Structural
 {
     public class Program
     {
+        private Runner _runner;
+
+        public Program(Runner runner)
+        {
+            _runner = runner;
+            _runner.Add("Adapter", () => WithAdapter());
+            _runner.Add("Composite", () => WithComposite());
+            _runner.Add("Decorator", () => WithDecorator());
+            _runner.Start();
+        }
+
         public static void Main(string[] args)
         {
-            var program = new Program();
-            program.WithAdapter();
-            program.WithComposite();
-            program.WithDecorator();
+            var program = new Program(new Runner());
         }
 
         private void WithDecorator()

@@ -4,9 +4,9 @@ namespace Behavioral
 {
     public class Program
     {
-        private DemoRunner.Runner _runner;
+        private Runner _runner;
 
-        public Program(DemoRunner.Runner runner)
+        public Program(Runner runner)
         {
             _runner = runner;
             _runner.Add("Observer", () => WithTemplateMethod());
@@ -17,7 +17,7 @@ namespace Behavioral
 
         public static void Main(string[] args)
         {
-            var program = new Program(new DemoRunner.Runner());
+            var program = new Program(new Runner());
         }
 
         private void WithTemplateMethod()

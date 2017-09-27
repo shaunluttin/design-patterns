@@ -1,12 +1,13 @@
 using System;
+using DemoRunner;
 
 namespace CreationalPatterns
 {
     public class Program
     {
-        private DemoRunner.Runner _runner;
+        private Runner _runner;
 
-        public Program(DemoRunner.Runner runner)
+        public Program(Runner runner)
         {
             _runner = runner;
             _runner.Add("Naive Approach", () => WithNaiveApproach());
@@ -19,7 +20,7 @@ namespace CreationalPatterns
 
         public static void Main(string[] args)
         {
-            var program = new Program(new DemoRunner.Runner());
+            var program = new Program(new Runner());
         }
 
         private void WithNaiveApproach()
