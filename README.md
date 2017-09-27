@@ -4,8 +4,8 @@ A repository for us to learn and write about design patterns and principles.
 
 # Primary Content
 
-* [CSharp Examples](CSharp/README.md)
-* [TypeScript Examples](TypeScript/README.md)
+* [CSharp Examples](CSharp/)
+* [TypeScript Examples](TypeScript/)
 * [Articles](articles)
 * [Presentation](LaTex/design-patterns-15min.pdf)
 
