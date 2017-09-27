@@ -4,14 +4,15 @@ namespace Structural.Shared
     // be a wrapper around an integer value.
     public struct Coord
     {
-        private readonly int X;
-        
-        private readonly int Y;
+        private int _value;
 
-        public Coord(int x, int y)
+        public Coord(int i)
         {
-            X = x;
-            Y = y;
+            _value = i;
         }
+
+        public static implicit operator int(Coord c) => c._value;
+
+        public static implicit operator Coord(int i) => new Coord(i);
     }
 }
