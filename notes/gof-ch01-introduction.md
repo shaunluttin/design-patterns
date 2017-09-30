@@ -1,3 +1,4 @@
+These are notes from the introduction chapter from Design Patterns (Gamma et al, 1994).
 
 ## Intro
 
@@ -69,19 +70,60 @@
 
 These are the XXX design problems that design patterns help to solve.
 
-### Finding appropriate objects
+### Problem: Finding appropriate objects
 
-### Determining object granularity
+objects are *encapsulated*
 
-### Specifying object interfaces
+* "an object packages both data and the procedures that operate on that data"
+* "an object performs an operation when it receives a request (or message) from a client"
+* its "internal state ... cannot be accessed directly, and its representation is invisible from outside"
 
-### Specifying object implementations
+decomposing a system into objects is difficult; some approaches
+
+* write a problem statement; nouns become objects, verbs become operations
+* focus on collaborations & responsibilities
+* model the real world as objects and interactions
+
+> Strict modeling of the real world leads to a system that reflects today's realities but not necessarily tomorrow's.
+
+Design patterns 
+
+* help us find abstractions that are not found in the real world 
+* but that make a system more flexible and reusable.
+
+### Problem: Determining object granularity
+
+* some objects represent large concepts (e.g. a Facade)
+* other objects represent tiny ideas (e.g. Flyweight)
+
+### Problem: Specifying object interfaces
+
+* an *interface* is a set of requests/messages an object will accept
+* an interface has many signatures, which include an operation's
+    * name
+    * parameters
+    * return value
+* a *type* is the name of a specific interface
+    * an object may have many different types
+    * widely different objects may share a type
+    * clients know objects only through their interfaces
+* a *subtype*'s interface contains/inherits the interface of its *supertype*
+* *dynamic binding* is the "run-time association of a request to an object and one of its operations"
+* this enables *polymorphism*: the substitution of different implementations of the same type
+    * simplifies the defn of clients
+    * decouples objects from each other
+    * lets them vary their relationships at runtime
+* design patterns help us 
+    * choose what (not) to include in an interface
+    * define relationships among interfaces
+
+### Problem: Specifying object implementations
 
 Class vs interface inheritance
 
 Programming to an interface, not an implementation
 
-### Putting reuse mechanisms to work
+### Problem: Putting reuse mechanisms to work
 
 Inheritance vs composition
 
@@ -89,9 +131,9 @@ Delegation
 
 Inheritance vs parameterized types
 
-### Relating run-time and compile-time structures
+### Problem: Relating run-time and compile-time structures
 
-### Designing for change
+### Problem: Designing for change
 
 Application programs
 
