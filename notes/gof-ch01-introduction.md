@@ -55,13 +55,12 @@ The catalog of desing patterns
 Organizing the catalog
 
 * purpose: the pattern's intent
-    * creational (05): creating objects
-    * structural (08): composing classes/objects
-    * behavioral (11): interacting classes/objects
+    * creational (x05): creating objects
+    * structural (x08): composing classes/objects
+    * behavioral (x11): interacting classes/objects
 * scope: the pattern's focus
-    * class  (04): static, fixed at compile-time, subclasses, inheritance
-    * object (20): dynamic, changeable at run-time, object relationships
-
+    * class  (x04): static, fixed at compile-time, subclasses, inheritance
+    * object (x20): dynamic, changeable at run-time, object relationships
 * defer to subclass -vs- defer to object
 * inheritance to compose classes -vs- composition to assemble objects
 * inheritance to describe algorithms -vs- cooperating objects to perform tasks
