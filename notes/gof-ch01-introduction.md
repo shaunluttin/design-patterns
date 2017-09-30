@@ -32,7 +32,25 @@ Design patterns in Smalltalk MVC
 
 Describing design patterns
 
+* name: the pattern's essense 
+* classification: 
+* intent: what does the pattern do?
+* aka: other names
+* motivation: the problem and its solution
+* applicability: when to use it
+* structure: graphical representation of its classes
+* participants: responsibilities of its classes and objects
+* collaborations: how the classes/objects interact
+* consequences: pros/cons & what the pattern allows us to vary independently
+* implementation: pitfalls, hints, techniques, subtleties
+* sample code: C++/Smalltalk
+* known uses: where did the GOF find it?
+* related patterns: comparison to similar patterns & commonly collaborating patterns
+
 The catalog of desing patterns
+
+* the name and 
+* the intent
 
 Organizing the catalog
 
