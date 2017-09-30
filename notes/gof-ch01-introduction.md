@@ -1,5 +1,5 @@
 
-Intro
+## Intro
 
 * Good OO designs allow
     * reuse
@@ -8,7 +8,7 @@ Intro
 * stand on shoulders; do not resolve these problem
 * GOF catalogs patterns from existing systems
 
-What is a design pattern? 
+## What is a design pattern? 
 
 * repeated problem > core of a solution > inspiration for your solution
 * "a [generalized] solution to a problem in a context"
@@ -19,7 +19,7 @@ What is a design pattern?
     * consequences [outcome]
 * "descriptions of communicating objects and classes that are customized to solve a general design problem in a particular context"
 
-Design patterns in Smalltalk MVC
+## Design patterns in Smalltalk MVC
 
 * MVC decouples these three to enable reuse/flexibility
     * model: application object
@@ -30,7 +30,7 @@ Design patterns in Smalltalk MVC
     * Nested views are a *Composite* pattern
     * The view-controller relationship is a *Strategy* pattern
 
-Describing design patterns
+## Describing design patterns
 
 * name: the pattern's essense 
 * classification: 
@@ -47,12 +47,12 @@ Describing design patterns
 * known uses: where did the GOF find it?
 * related patterns: comparison to similar patterns & commonly collaborating patterns
 
-The catalog of desing patterns
+## The catalog of desing patterns
 
 * the name and 
 * the intent
 
-Organizing the catalog
+## Organizing the catalog
 
 * purpose: the pattern's intent
     * creational (x05): creating objects
@@ -65,10 +65,42 @@ Organizing the catalog
 * inheritance to compose classes -vs- composition to assemble objects
 * inheritance to describe algorithms -vs- cooperating objects to perform tasks
 
-How design patterns solve design problems
+## How design patterns solve design problems
 
-How to select a desing pattern
+These are the XXX design problems that design patterns help to solve.
 
-How to use a design pattern
+### Finding appropriate objects
+
+### Determining object granularity
+
+### Specifying object interfaces
+
+### Specifying object implementations
+
+Class vs interface inheritance
+
+Programming to an interface, not an implementation
+
+### Putting reuse mechanisms to work
+
+Inheritance vs composition
+
+Delegation
+
+Inheritance vs parameterized types
+
+### Relating run-time and compile-time structures
+
+### Designing for change
+
+Application programs
+
+Toolkits
+
+Framworks
+
+## How to select a desing pattern
+
+## How to use a design pattern
 
 
