@@ -21,7 +21,14 @@ What is a design pattern?
 
 Design patterns in Smalltalk MVC
 
-
+* MVC decouples these three to enable reuse/flexibility
+    * model: application object
+    * view: its screen presentation
+    * controller: how the UI reacts to user input
+* There are patterns in there
+    * The view-model relationship is an *Observer* pattern
+    * Nested views are a *Composite* pattern
+    * The view-controller relationship is a *Strategy* pattern
 
 Describing design patterns
 
