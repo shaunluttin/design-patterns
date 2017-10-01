@@ -203,17 +203,17 @@
 
 \begin{frame}{A class should have only one reason to change.}
     \begin{itemize}
-        \item SOLID: Single Responsibility Principle (Martin, 2003)
         \item ``A class should have only one reason to change''
         \begin{itemize}
             \item Recall from ``encapsulate what varies.''
             \item This refers to changes to source code.
             \item Source code changes due to changing requirements.
         \end{itemize}
+    \item SOLID: Single Responsibility Principle (Martin, 2003)
     \item Why? 
         \begin{itemize}
-            \item (Re)use feature X without bringing feature A-Z.
-            \item Change feature X without breaking/recompiling what depends on feature A-Z.
+            \item Use feature X without bringing feature Y
+            \item Change feature X without breaking/recompiling feature Y.
         \end{itemize}
     \end{itemize}
 \end{frame}
@@ -304,8 +304,8 @@
             \end{itemize}
         \item SOLID: Liskov Substitution (Liskov and Wing, 1994)
             \begin{itemize}
-                \item A consumer that is expecting type A, 
-                \item should have no surprises on receiving a child of type A.
+                \item A consumer that is expecting type X, 
+                \item should have no surprises on receiving a child Y of type X.
                 \item Compilers do not help: this is a semantic not syntactic.
                 \item VegetableBasket should have-a List not be-a List
                 \item VegetableBasket could be-a Basket not have-a Basket
