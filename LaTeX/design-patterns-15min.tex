@@ -304,6 +304,22 @@
     \end{columns}
 \end{frame}
 
+\begin{frame}{Open-Closed Principle \ldots}
+    \vspace{0cm}
+    \begin{columns}
+        \column{\dimexpr\paperwidth-40pt}
+        \lstinputlisting{src/simple/open-closed.1.ts}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Open-Closed Principle \ldots}
+    \vspace{0cm}
+    \begin{columns}
+        \column{\dimexpr\paperwidth-40pt}
+        \lstinputlisting{src/simple/open-closed.2.ts}
+    \end{columns}
+\end{frame}
+
 \begin{frame}{Favour composition over inheritance.}
     \begin{itemize}
         \item Composition means a has-a relationship.
@@ -329,7 +345,9 @@
             \begin{itemize}
                 \item A consumer that is expecting type X, 
                 \item should have no surprises on receiving a child XX of type X.
-                \item Compilers do not help: this is semantic not syntactic.
+            \end{itemize}
+        \item Compilers do not help: this is semantic not syntactic.
+            \begin{itemize}
                 \item E.g. Even though a Square is a Rectangle,
                 \item a Square class should not inherit from a Rectangle class,
                 \item because a client with a Rectangle expects,
@@ -349,9 +367,11 @@
 \begin{frame}{Strive for loosely coupled designs among objects that interact.}
     \begin{itemize}
         \item This is the summary statement for all the princples.
-        \item When loosely coupled, we can \ldots
-        \item \ldots change X without needing to change Y, and
-        \item \ldots use X without needing to bring along Y.
+        \item When loosely coupled, we can:
+            \begin{itemize}
+                \item change X without needing to change Y, and
+                \item use X without needing to bring along Y.
+            \end{itemize}
         \item Modular architecture!
     \end{itemize}
 \end{frame}
