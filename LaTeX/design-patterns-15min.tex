@@ -72,8 +72,9 @@
 \begin{frame}{Why?}
 
     \begin{itemize}
-        \item Allow change (of system capacities) without redesign.
-        \item Allow reuse in other applications.
+        \item Modularity
+        \item Allow change of X without changing Y.
+        \item Allow reuse of X without changing Y.
     \end{itemize}
 
 \end{frame}
@@ -106,15 +107,16 @@
 
 \begin{frame}{Program to interfaces not to implementations.}
     \begin{itemize}
-        \item an interface says only what requests it will receive
+        \item an interface says what requests it will receive
         \item an implementation says how it will handle those requests
         \item programming to interfaces helps because it
             \begin{itemize}
-                \item lets us easily change an implementation, even at runtime
+                \item lets us change an implementation, even at runtime
                 \item allows applications to send the same request to different classes
             \end{itemize}
-        \item SOLID: Interface Segregation Principle (Martin, 1996)
+        \item A separate, related SOLID principle:
             \begin{itemize}
+                \item Interface Segregation Principle (Martin, 1996)
                 \item Define an interface that is specific to the needs of the client.
                 \item ``Clients should not be forced to depend upon interfaces that they do not use.'' (Martin, 1996)
             \end{itemize}
@@ -130,9 +132,9 @@
 
 \begin{frame}{Depend on abstractions not on concrete classes.}
     \begin{itemize}
-        \item interfaces and abstractions are similar: neither can exist
-        \item concrete classes can exist (i.e. can become objects)
-        \item to depend on something means a direct reference to it
+        \item To depend means to make a direct reference.
+        \item Abstractions commit to a interface/type.
+        \item Concrete classes commit to an implementation.
         \item SOLID: Dependency Inversion Principle (Martin, 1996)
         \begin{itemize}
             \item Traditionally, high-level modules depend on low-level modules:
@@ -140,9 +142,10 @@
             \item Dependency Inversion inverts that:
             \item Higher \textrightarrow{} Abstraction \textleftarrow{} Middle \textrightarrow{} Abstraction \textleftarrow{} Lower ...
         \end{itemize}
-        \item When layering, higher-levels define the abstractions
-        \item and lower-levels implement the abstractions.
-        \item Why? Enable reuse of higher-level modules.
+        \item When using dependency inversion, 
+        \item the higher-levels define the abstractions, and
+        \item the lower-levels implement the abstractions.
+        \item Why? This enables reuse of the higher-level modules.
     \end{itemize}
 \end{frame}
 

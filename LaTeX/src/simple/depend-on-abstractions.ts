@@ -1,32 +1,35 @@
-// Both the higher-level juicer and the lower-level components 
-// depend on an abstraction.
 namespace HigherLevel {
 
-    export function juicer(ingredients: Array<Juiceable>): Array<string> {
-        // Dependency inversion leverages programming to interfaces.
-        return ingredients.map((i) => i.juice());
+    // The higher level module defines the abstraction.
+    export interface Juiceable {
+        squeeze(): string;
     }
 
-    // The higher level module owns the abstraction on which it depends.
-    export interface Juiceable {
-        juice(): string;
+    // The higher level module depends on the abstraction.
+    export function juicer(ingredients: Array<Juiceable>): Array<string> {
+        // Note: dependency inversion leverages programming to interfaces.
+        let juice = new Array<string>();
+        for (const i of ingredients) {
+            juice.push(i.squeeze());
+        }
+
+        return juice;
     }
+
 }
 
 namespace LowerLevel {
 
+    // The lower level module depends on the abstraction.
     export class Orange implements HigherLevel.Juiceable {
-        public juice() {
-            return "orange juice";
-        }
+        public squeeze = () => "orange juice";
     }
 
     export class Carrot implements HigherLevel.Juiceable {
-        public juice() {
-            return "carrot juice";
-        }
+        public squeeze = () => "carrot juice";
     }
 }
+
 
 
 

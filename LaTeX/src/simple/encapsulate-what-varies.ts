@@ -4,8 +4,9 @@ class Product {
 
 // We have encapsulated the calculation of tax.
 class TaxCalculator {
+
     public calculateTax(product: Product): number {
-        // Do the calculation of tax.
+        // This does complex, involved calculation of tax.
         return 0;
     }
 }
@@ -14,19 +15,18 @@ class FarmStand {
 
     private cart: Array<Product>;
 
-    public CalculateGrandTotal(): number {
-        let total = 0;
+    public CalculateTotalTax(): number {
+
         const taxCalculator = new TaxCalculator();
+        let totalTax = 0;
+
         for (const product of this.cart) { 
-            const tax = taxCalculator.calculateTax(product);
-            total += product.price + tax;
+            totalTax += taxCalculator.calculateTax(product);
         }
 
-        return total;
+        return totalTax;
     }
 }
-
-
 
 
 
