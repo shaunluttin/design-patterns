@@ -168,6 +168,21 @@ Many languages do not make these distinctions explicit
 
 #### Programming to an interface, not an implementation
 
+* inheritance enables 
+    * reuse via subclassing
+    * polymorphism via subtyping
+* carefully done, inheritance never hides its parents' operations; benefits:
+    * polymorphism!
+    * clients care only that the the object adheres to the expected interface
+    * clients remain unaware of the specific object type...
+    * clients remain unaware of the specific object class...
+    * this greatly reduces implementation dependencies b/w subsystems
+
+> Program to an interface, not an implementation.
+
+* That is: declare variables to be of an interface type not a concrete class type.
+
+> Creational patterns ensure that your system is written in terms of interfaces, not implementations.
 
 ### Problem: Putting reuse mechanisms to work
 
