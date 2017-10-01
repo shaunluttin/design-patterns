@@ -153,7 +153,15 @@
     \vspace{0cm}
     \begin{columns}
         \column{\dimexpr\paperwidth-40pt}
-        \lstinputlisting{src/simple/depend-on-abstractions.ts}
+        \lstinputlisting{src/simple/depend-on-abstractions-higher.ts}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Depend on abstractions \ldots}
+    \vspace{0cm}
+    \begin{columns}
+        \column{\dimexpr\paperwidth-40pt}
+        \lstinputlisting{src/simple/depend-on-abstractions-lower.ts}
     \end{columns}
 \end{frame}
 
@@ -205,12 +213,20 @@
     \end{columns}
 \end{frame}
 
+\begin{frame}{A class should have only one reason to change \ldots}
+    \vspace{0cm}
+    \begin{columns}
+        \column{\dimexpr\paperwidth-40pt}
+        \lstinputlisting{src/simple/one-reason-to-change-better.ts}
+    \end{columns}
+\end{frame}
+
 \begin{frame}{Don't call us, we'll call you.}
     \begin{itemize}
         \item "Hollywood Principle" (Sweet, 1983)
         \item "Inversion of Control" (Johnson and Foote, 1988)
             \begin{itemize}
-                \item Dependency injection is a type of Inversion of Control
+                \item Dependency injection is a type of Inversion of Control (TODO: Check this)
                 \item IoC containers are a type of Dependency Injection
             \end{itemize}
         \item Dependency Inversion - who owns the abstraction?
@@ -221,7 +237,7 @@
                 \item library: "a set of functions you can call"
                 \item framework: "insert your behavior into various places"
             \end{itemize}
-        \item How? subclassing, implementing iterfaces, binding/events
+        \item How? subclassing, implementing interfaces, binding/events
     \end{itemize}
 \end{frame}
 
@@ -229,9 +245,18 @@
     \vspace{0cm}
     \begin{columns}
         \column{\dimexpr\paperwidth-40pt}
-        \lstinputlisting{src/simple/dont-call-us.ts}
+        \lstinputlisting{src/simple/inversion-of-control.ts}
     \end{columns}
 \end{frame}
+
+\begin{frame}{Don't call us, we'll call you \ldots}
+    \vspace{0cm}
+    \begin{columns}
+        \column{\dimexpr\paperwidth-40pt}
+        \lstinputlisting{src/simple/inversion-of-control-client.ts}
+    \end{columns}
+\end{frame}
+
 
 \begin{frame}{Classes should be open to extension and closed for modification.}
     \begin{itemize}

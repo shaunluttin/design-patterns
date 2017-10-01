@@ -1,8 +1,9 @@
-function orangeCarrotJuice(): Array<string> {
+function makeOrangeCarrotJuice(): Array<string> {
+
+    const medley = new Array<string>();
 
     const orange: Juiceable = new Orange();
     const carrot: Juiceable = new Carrot();
-    let medley = new Array<string>();
 
     // The following only knows about Juiceables.
     for (const juicable of [orange, carrot]) {
@@ -22,8 +23,6 @@ class Carrot implements Juiceable {
     public squeeze = () => "carrot juice";
     public chop = () => { /* chop the carrot */ }
 }
-
-
 
 
 

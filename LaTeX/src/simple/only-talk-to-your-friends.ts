@@ -2,31 +2,30 @@ class Farmer {
 
     private equipment: Array<FarmEquipment>;
 
-    private energyLevel: number;
-
     // A method of an object may only call methods of: 
-    public DigHole(place: Place) {
+    public digHole(place: Place) {
+
+        // Any object created within the method.
         const shovel = new Shovel();
-        while (this.energyLevel > 0) {
+        shovel.dig(place);
 
-            // 1. The object itself.
-            this.decreaseEnergyLevel();
-
-            // 2. Any argument of the method.
-            const target = place.getHighestPlaceWithin();
-
-            // 3. Any object created within the method.
-            shovel.dig(target);
-        }
-
-        // 4. Any direct properties/fields of the object.
+        // Any direct properties/fields of the object.
         this.equipment.push(shovel);
+
+        // The object itself.
+        this.decreaseEnergyLevel();
+
+        // Any argument of the method.
+        let placeName = place.getName();
+
+        // BAD: Farmer knows too much about the system.
+        placeName = place.details.locationDetails.name;
     }
 
-    private decreaseEnergyLevel() {
-        this.energyLevel = this.energyLevel - 1;
-    }
+    private decreaseEnergyLevel = () => { };
 }
+
+
 
 
 
@@ -40,7 +39,16 @@ class Farmer {
 
 /* Out of frame at ln 40 */
 class Place {
-    getHighestPlaceWithin(): any { }
+
+    public details = {
+        locationDetails: {
+            name: "foo bar baz"
+        }
+    };
+
+    getName(): any {
+        return this.details.locationDetails.name;
+    }
 }
 
 class Shovel implements FarmEquipment {
