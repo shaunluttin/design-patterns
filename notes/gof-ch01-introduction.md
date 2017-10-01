@@ -186,24 +186,23 @@ Many languages do not make these distinctions explicit
 
 ### Problem: Putting reuse mechanisms to work
 
-Inheritance vs composition
+#### Inheritance vs composition
 
-Delegation
+#### Delegation
 
-Inheritance vs parameterized types
+#### Inheritance vs parameterized types
 
 ### Problem: Relating run-time and compile-time structures
 
 ### Problem: Designing for change
 
-Application programs
+#### Application programs
 
-Toolkits
+#### Toolkits
 
-Framworks
+#### Framworks
 
 ## How to select a desing pattern
 
 ## How to use a design pattern
-
 

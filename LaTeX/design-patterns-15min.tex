@@ -69,6 +69,12 @@
                 \item lets us easily change an implementation, even at runtime
                 \item allows applications to send the same request to different classes
             \end{itemize}
+        \item Interface Segregation Principle (Martin, 1996)
+        \item SOL\emph{I}D % solid
+            \begin{itemize}
+                \item Define an interface that is specific to the needs of the client.
+                \item ``Clients should not be forced to depend upon interfaces that they do not use.'' (Martin, 1996)
+            \end{itemize}
     \end{itemize}
 \end{frame}
 
@@ -78,6 +84,7 @@
         \item concrete classes can exist (i.e. can become objects)
         \item to depend on something means a direct reference to it
         \item The Dependency Inversion Principle (Martin, 1996)
+        \item SOLI\emph{D} % solid
         \begin{itemize}
             \item Traditionally, high-level modules depend on low-level modules:
             \item Higher \textrightarrow{} Middle \textrightarrow{} Lower \textrightarrow{} ...
@@ -107,6 +114,7 @@
 
 \begin{frame}{A class should have only one reason to change.}
     \begin{itemize}
+        \item \emph{S}OLID % solid
         \item The Single Responsibility Principle (Martin, 2003)
         \item ``A class should have only one reason to change''
         \begin{itemize}
@@ -144,6 +152,7 @@
 
 \begin{frame}{Classes should be open to extension and closed for modification.}
     \begin{itemize}
+        \item S\emph{O}LID % solid
         \item The Open-Closed Principle
         \item Once it is shipped, the source code is sacrosanct.
         \item Rather than change the source code and risk breaking it, 
@@ -167,6 +176,7 @@
             \end{itemize}
         \item The Liskov Substitution Principle (Liskov and Wing, 1994)
             \begin{itemize}
+                \item SO\emph{L}ID % solid
                 \item A consumer that is expecting A, 
                 \item should have no surprises on receiving a child of A.
                 \item Compilers do not help: this is a semantic syntactic contraint.
