@@ -2,23 +2,24 @@ class Farmer {
 
     private equipment: Array<FarmEquipment>;
 
-    // A method of an object may only call methods of: 
+    // In the formal definition of the Law of Demeter
+    // a method of an object must only call members of...
     public digHole(place: Place) {
 
-        // Any object created within the method.
+        // objects created within the method,
         const shovel = new Shovel();
         shovel.dig(place);
 
-        // Any direct properties/fields of the object.
-        this.equipment.push(shovel);
-
-        // The object itself.
+        // the object itself,
         this.decreaseEnergyLevel();
 
-        // Any argument of the method.
+        // direct properties/fields of the object, or
+        this.equipment.push(shovel);
+
+        // any argument of the method.
         let placeName = place.getName();
 
-        // BAD: Farmer knows too much about the system.
+        // BAD: the Farmer now knows too much about the system.
         placeName = place.details.locationDetails.name;
     }
 
