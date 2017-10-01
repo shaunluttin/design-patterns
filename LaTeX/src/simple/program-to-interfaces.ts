@@ -5,7 +5,7 @@ function makeOrangeCarrotJuice(): Array<string> {
     const orange: Juiceable = new Orange();
     const carrot: Juiceable = new Carrot();
 
-    // The following only knows about Juiceables.
+    // The following is programming to Juiceable interfaces
     for (const juicable of [orange, carrot]) {
         const juice = juicable.squeeze();
         medley.push(juice);

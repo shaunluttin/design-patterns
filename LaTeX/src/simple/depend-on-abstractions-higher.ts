@@ -8,12 +8,13 @@ export function makeJuice(ingredients: Array<Juiceable>) {
 
     const medley = new Array<string>();
 
-    // The high level no longer depends on the lower level conrete classes.
+    // The higher level no longer depends on the lower level conrete classes.
     // const orange: Juiceable = new Orange();
     // const carrot: Juiceable = new Carrot();
 
     for (const juicable of ingredients) {
-        medley.push(juicable.squeeze());
+        const juice = juicable.squeeze();
+        medley.push(juice);
     }
 
     return medley;

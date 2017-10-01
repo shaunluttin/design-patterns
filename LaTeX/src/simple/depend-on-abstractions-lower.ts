@@ -1,17 +1,20 @@
-// The lower level module depends on the abstraction.
-// Thereby letting it plugin to the higher level module.
-import { Juiceable } from "./depend-on-abstractions-higher";
+import { Juiceable, makeJuice } from "./depend-on-abstractions-higher";
 
-export class Orange implements Juiceable {
+// The lower level module depends on the abstraction.
+class Orange implements Juiceable {
     public squeeze = () => "orange juice";
 }
 
-export class Carrot implements Juiceable {
+class Carrot implements Juiceable {
     public squeeze = () => "carrot juice";
 }
 
-
-
+// That lets it plug in to the higher level module.
+makeJuice([
+    new Orange(),
+    new Orange(),
+    new Carrot(),
+    new Carrot()]);
 
 
 
