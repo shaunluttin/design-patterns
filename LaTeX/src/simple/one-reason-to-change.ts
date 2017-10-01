@@ -6,8 +6,6 @@
  * 2. maintaining it after planting
  * 3. harvesting
  * 
- * It's likely that our watering system will change 
- * independently of our harvesting system.
  */
 
 class RaisedBed {
@@ -20,7 +18,7 @@ class RaisedBed {
 
     public addWater() { }
 
-    public harvestProduce() { }
-
     public pullWeeds() { }
+
+    public harvestProduce() { }
 }

@@ -143,9 +143,9 @@
 
 \begin{frame}{Depend on abstractions not on concrete classes.}
     \begin{itemize}
-        \item To depend means to make a direct reference.
-        \item Abstractions commit to a interface/type.
-        \item Concrete classes commit to an implementation.
+        \item ``Depend'' means make a direct reference.
+        \item ``Abstractions'' define the interface/type.
+        \item ``Concrete classes'' define the implementation.
         \item SOLID: Dependency Inversion Principle (Martin, 1996)
         \begin{itemize}
             \item Traditionally, high-level modules depend on low-level modules:
@@ -159,6 +159,21 @@
             \item the lower-levels implement the abstractions.
         \end{itemize}
         \item Why? This enables reuse of the higher-level modules.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Depend on abstractions not on concrete classes.}
+    \begin{itemize}
+    \item Aside:
+        \begin{itemize}
+            \item Dependency Injection is a mix of two principles:
+                \begin{itemize}
+                    \item Dependency Inversion
+                    \item Inversion of Control (IoC)
+                \end{itemize}
+            \item IoC containers are a type of Dependency Injection
+        \end{itemize}
+        \item See also: https://martinfowler.com/articles/injection.html
     \end{itemize}
 \end{frame}
 
@@ -238,10 +253,6 @@
     \begin{itemize}
         \item "Hollywood Principle" (Sweet, 1983)
         \item "Inversion of Control" (Johnson and Foote, 1988)
-            \begin{itemize}
-                \item Dependency injection is a type of Inversion of Control (TODO: Check this)
-                \item IoC containers are a type of Dependency Injection
-            \end{itemize}
         \item Dependency Inversion - who owns the abstraction?
         \item Inversion of Control - when do things happen?
         \item "coordinating and sequencing application activity"         

@@ -1,7 +1,7 @@
 /* 
  * This is a better segregation of responsibilities.
  * 
- * E.g. A client can now use the harvesting component independencly. 
+ * E.g. A client can use the harvesting component independently. 
  */
 
 class RaisedBedPreparationService {
@@ -13,7 +13,7 @@ class RaisedBedPreparationService {
     public addSeeds() { }
 }
 
-class RaisedBedMaintenacenService {
+class RaisedBedMaintenanceService {
 
     public addWater() { }
 
