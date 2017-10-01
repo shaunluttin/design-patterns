@@ -119,9 +119,55 @@ Design patterns
 
 ### Problem: Specifying object implementations
 
-Class vs interface inheritance
+* A *class* defines an object's implementation.
+    * internal data
+    * operations
+* *Instantiating* a class creates an object *instance* 
+    * allocates storage for the internal data
+    * associates operations with that data
+* *inheritance* defines a subclass in terms of an existing class
+* subclass objects incl. the parent classes data and operations
+* an *abstact class* cannot be instantiated; its purpose is to parent subclasses
+* an *abstract operations* is an operation without an implementation
+* the opposite is *concrete*
+* a *subclass* can override and thereby refine its parent classes' operations
+* a *mixin class* requires multiple inheritance; it provides an optional interface
 
-Programming to an interface, not an implementation
+#### Class vs interface inheritance
+
+Many design patterns rely on the distinction between 
+
+* class (implementation) inheritance and 
+* interface inheritance.
+
+Definitions
+
+* class
+    * defines the interface implementation and the internal state
+    * objects of different classes can have the same types
+* type 
+    * defines only the interface interface of acceptable requests
+    * an object can have many types
+* class (implementation) inheritance
+    * defines an object's implementation...
+    * in terms of another object's implementation
+    * enables code sharing
+* interface inheritance
+    * describes when one object...
+    * can be used in place of another object
+
+Many languages do not make these distinctions explicit
+
+* Smalltalk inheritance means only implementation (class) inheritance.
+* C++ inheritance means both interface and class inheritance
+    * Interface-only C++ inheritance means 
+    * publically inheriting a pure abstract class 
+    * with only pure virtual operations.
+    * Implementation-only C++ inheritance means
+    * privately inheriting from a class with concrete operations.
+
+#### Programming to an interface, not an implementation
+
 
 ### Problem: Putting reuse mechanisms to work
 
