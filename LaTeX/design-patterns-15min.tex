@@ -143,6 +143,21 @@
 
 \begin{frame}{Depend on abstractions not on concrete classes.}
     \begin{itemize}
+    \item Aside:
+        \begin{itemize}
+            \item Dependency Injection is a mix of two principles:
+                \begin{itemize}
+                    \item Dependency Inversion
+                    \item Inversion of Control (IoC)
+                \end{itemize}
+            \item IoC containers are a type of Dependency Injection
+        \end{itemize}
+        \item See also: https://martinfowler.com/articles/injection.html
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Depend on abstractions not on concrete classes.}
+    \begin{itemize}
         \item ``Depend'' means make a direct reference.
         \item ``Abstractions'' define the interface/type.
         \item ``Concrete classes'' define the implementation.
@@ -159,21 +174,6 @@
             \item the lower-levels implement the abstractions.
         \end{itemize}
         \item Why? This enables reuse of the higher-level modules.
-    \end{itemize}
-\end{frame}
-
-\begin{frame}{Depend on abstractions not on concrete classes.}
-    \begin{itemize}
-    \item Aside:
-        \begin{itemize}
-            \item Dependency Injection is a mix of two principles:
-                \begin{itemize}
-                    \item Dependency Inversion
-                    \item Inversion of Control (IoC)
-                \end{itemize}
-            \item IoC containers are a type of Dependency Injection
-        \end{itemize}
-        \item See also: https://martinfowler.com/articles/injection.html
     \end{itemize}
 \end{frame}
 
@@ -251,12 +251,17 @@
 
 \begin{frame}{Don't call us, we'll call you.}
     \begin{itemize}
-        \item "Hollywood Principle" (Sweet, 1983)
-        \item "Inversion of Control" (Johnson and Foote, 1988)
-        \item Dependency Inversion - who owns the abstraction?
-        \item Inversion of Control - when do things happen?
-        \item "coordinating and sequencing application activity"         
-        \item "makes a framework different from a library":
+        \item This principle is also known as
+            \begin{itemize}
+                \item "Hollywood Principle" (Sweet, 1983)
+                \item "Inversion of Control" (Johnson and Foote, 1988)
+            \end{itemize}
+        \item Inversion of Control (IoC) is about when things happen.
+        \item It differs from Dependency Inversion, 
+            \begin{itemize}
+                \item which is about who owns the abstraction.
+            \end{itemize}
+        \item IoC "makes a framework different from a library" (Fowler)
             \begin{itemize}
                 \item library: "a set of functions you can call"
                 \item framework: "insert your behavior into various places"
@@ -312,17 +317,33 @@
                 \item Tall class heirachies are brittle.
                 \item Changing an implementation is limited to compile time.
                 \item Is it good for defining taxonomies. (e.g. a String is an Object)
-            \end{itemize}
-        \item SOLID: Liskov Substitution (Liskov and Wing, 1994)
-            \begin{itemize}
-                \item A consumer that is expecting type X, 
-                \item should have no surprises on receiving a child Y of type X.
-                \item Compilers do not help: this is a semantic not syntactic.
-                \item VegetableBasket should have-a List not be-a List
-                \item VegetableBasket could be-a Basket not have-a Basket
+                \item Note: inheritance means subclassing not subtyping.
             \end{itemize}
         \item https://www.thoughtworks.com/insights/blog/composition-vs-inheritance-how-choose
     \end{itemize}
+\end{frame}
+
+\begin{frame}{Favour composition over inheritance.}
+    \begin{itemize}
+        \item SOLID: Liskov Substitution (Liskov and Wing, 1994)
+            \begin{itemize}
+                \item A consumer that is expecting type X, 
+                \item should have no surprises on receiving a child XX of type X.
+                \item Compilers do not help: this is semantic not syntactic.
+                \item E.g. Even though a Square is a Rectangle,
+                \item a Square class should not inherit from a Rectangle class,
+                \item because a client with a Rectangle expects,
+                \item the ability to set the height and width to different values.
+            \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Favour composition over inheritance \ldots}
+    \vspace{0cm}
+    \begin{columns}
+        \column{\dimexpr\paperwidth-40pt}
+        \lstinputlisting{src/simple/composition-over-inheritance.ts}
+    \end{columns}
 \end{frame}
 
 \begin{frame}{Strive for loosely coupled designs among objects that interact.}
