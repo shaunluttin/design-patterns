@@ -70,13 +70,25 @@
 \end{frame}
 
 \begin{frame}{Why?}
-
     \begin{itemize}
         \item Modularity
         \item Allow change of X without changing Y.
         \item Allow reuse of X without changing Y.
     \end{itemize}
+\end{frame}
 
+\begin{frame}{The Principles}
+    \begin{itemize}
+        \item Encapsulate what varies.
+        \item Program to interfaces not to implementations.
+        \item Depend on abstractions not on concrete classes. 
+        \item Only talk to your friends.
+        \item A class should have only one reason to change.
+        \item Don't call us, we'll call you.
+        \item Classes should be open to extension and closed to modification.
+        \item Favour composition over inheritance.
+        \item Strive for loosely coupled designs among objects that interact.
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{Encapsulate what varies.}
@@ -257,7 +269,6 @@
     \end{columns}
 \end{frame}
 
-
 \begin{frame}{Classes should be open to extension and closed for modification.}
     \begin{itemize}
         \item SOLID: Open-Closed Principle
@@ -268,26 +279,37 @@
     \end{itemize}
 \end{frame}
 
+\begin{frame}{Open-Closed Principle \ldots}
+    \vspace{0cm}
+    \begin{columns}
+        \column{\dimexpr\paperwidth-40pt}
+        \lstinputlisting{src/simple/open-closed.ts}
+    \end{columns}
+\end{frame}
+
 \begin{frame}{Favour composition over inheritance.}
     \begin{itemize}
         \item Composition means a has-a relationship.
             \begin{itemize}
                 \item It is often more semantically natural.
                 \item It lets us swap implementations at runtime.
+                \item It is good for code-reuse.
             \end{itemize}
         \item Inheritance means an is-a relationship.
             \begin{itemize}
                 \item Tall class heirachies are brittle.
                 \item Changing an implementation is limited to compile time.
-                \item It is harder to do correctly.
+                \item Is it good for defining taxonomies. (e.g. a String is an Object)
             \end{itemize}
-        \item SOLID: Liskov Substitution Principle (Liskov and Wing, 1994)
+        \item SOLID: Liskov Substitution (Liskov and Wing, 1994)
             \begin{itemize}
-                \item A consumer that is expecting A, 
-                \item should have no surprises on receiving a child of A.
-                \item Compilers do not help: this is a semantic syntactic contraint.
-                \item e.g. class Hemlock should probably not inherit class Vegetable.
+                \item A consumer that is expecting type A, 
+                \item should have no surprises on receiving a child of type A.
+                \item Compilers do not help: this is a semantic not syntactic.
+                \item VegetableBasket should have-a List not be-a List
+                \item VegetableBasket could be-a Basket not have-a Basket
             \end{itemize}
+        \item https://www.thoughtworks.com/insights/blog/composition-vs-inheritance-how-choose
     \end{itemize}
 \end{frame}
 
@@ -297,6 +319,7 @@
         \item When loosely coupled, we can \ldots
         \item \ldots change X without needing to change Y, and
         \item \ldots use X without needing to bring along Y.
+        \item Modular architecture!
     \end{itemize}
 \end{frame}
 
