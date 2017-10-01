@@ -5,10 +5,8 @@ class Product {
 // We have encapsulated the calculation of tax.
 class TaxCalculator {
     public calculateTax(product: Product): number {
-        const tax = 0;
-        // Do the calculation of tax, 
-        // which will likely change over time.
-        return tax;
+        // Do the calculation of tax.
+        return 0;
     }
 }
 
@@ -16,16 +14,18 @@ class FarmStand {
 
     private cart: Array<Product>;
 
-    public DisplayGrandTotal(): number {
-        // Question: What else might we want to change without redesign?
+    public CalculateGrandTotal(): number {
+        let total = 0;
         const taxCalculator = new TaxCalculator();
-        return this.cart.reduce((sum, product) => {
+        for (const product of this.cart) { 
             const tax = taxCalculator.calculateTax(product);
-            const productGrandTotal = tax + product.price;
-            return sum + productGrandTotal;
-        }, 0);
+            total += product.price + tax;
+        }
+
+        return total;
     }
 }
+
 
 
 
