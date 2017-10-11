@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
     <ProjectReference Include="..\DemoRunner\DemoRunner.csproj" />
+    <ProjectReference Include="..\FoundationClasses\FoundationClasses.csproj" />
   </ItemGroup>
   <PropertyGroup>
     <OutputType>Exe</OutputType>

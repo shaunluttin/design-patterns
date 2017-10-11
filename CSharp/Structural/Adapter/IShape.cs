@@ -1,4 +1,4 @@
-using Structural.Shared;
+using FoundationClasses;
 
 namespace Structural.Adapter
 {

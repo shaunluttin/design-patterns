@@ -1,16 +1,14 @@
-using Structural.Shared;
-
 namespace Structural.Adapter
 {
     public class TextView
     {
-        public void GetOrigin(out Coord x, out Coord y)
+        public void GetOrigin(out float x, out float y)
         {
             x = 0;
             y = 0;
         }
 
-        public void GetExtent(out Coord width, out Coord height)
+        public void GetExtent(out float width, out float height)
         {
             width = 0;
             height = 0;

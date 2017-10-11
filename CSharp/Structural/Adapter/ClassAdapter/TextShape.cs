@@ -1,4 +1,5 @@
-using Structural.Shared;
+using FoundationClasses;
+using Structural;
 
 namespace Structural.Adapter.ClassAdapter
 {
@@ -9,7 +10,7 @@ namespace Structural.Adapter.ClassAdapter
     {
         public void BoundingBox(out Point bottomLeft, out Point topRight)
         {
-            Coord bottom, left, height, width;
+            float bottom, left, height, width;
 
             GetOrigin(out bottom, out left);
             GetExtent(out width, out height);
@@ -33,12 +34,12 @@ namespace Structural.Adapter.ClassAdapter
         // To mimic C++ private inheritance,
         // use `private new` to hide the public method,
         // and delegate to the base class to prevent a StackOverflowException.
-        private new void GetOrigin(out Coord x, out Coord y)
+        private new void GetOrigin(out float x, out float y)
         {
             base.GetOrigin(out x, out y);
         }
 
-        private new void GetExtent(out Coord width, out Coord height)
+        private new void GetExtent(out float width, out float height)
         {
             base.GetExtent(out width, out height);
         }

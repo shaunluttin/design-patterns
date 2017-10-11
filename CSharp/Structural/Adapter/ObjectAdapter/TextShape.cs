@@ -1,4 +1,4 @@
-using Structural.Shared;
+using FoundationClasses;
 
 namespace Structural.Adapter.ObjectAdapter
 {
@@ -17,7 +17,7 @@ namespace Structural.Adapter.ObjectAdapter
 
         public void BoundingBox(out Point bottomLeft, out Point topRight)
         {
-            Coord bottom, left, height, width;
+            float bottom, left, height, width;
 
             _textView.GetOrigin(out bottom, out left);
             _textView.GetExtent(out width, out height);
