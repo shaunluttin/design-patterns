@@ -5,7 +5,7 @@ namespace Behavioral.Strategy
         // "... examines components a line at a time to determine where
         // breaks should go... ignores the stretchability of components,
         // taking only their natural widths into consideration..."
-        public override int Compose(Coord[] natural, Coord[] stretch, Coord[] shrink, int componentCount, int lineWidth, int[] breaks)
+        public override int Compose(float[] natural, float[] stretch, float[] shrink, int componentCount, int lineWidth, int[] breaks)
         {
             System.Console.WriteLine("Composing with the Simple algorithm...");
 

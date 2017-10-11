@@ -12,7 +12,7 @@ namespace Behavioral.Observer
             _timer = new Timer((s) => Notify(), null, 0, 1000);
         }
 
-        public void Dispose() 
+        public void Dispose()
         {
             _timer.Dispose();
         }

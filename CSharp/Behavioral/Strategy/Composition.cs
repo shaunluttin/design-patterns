@@ -11,13 +11,10 @@ namespace Behavioral.Strategy
         private List<Component> _components = new List<Component>();
 
         // the Composition's line width
-        private int _lineWidth;
+        private int _lineWidth = 0;
 
         // the position of line breaks in components
-        private int[] _lineBreaks;
-
-        // the number of lines
-        private int _lineCount;
+        private int[] _lineBreaks = new int[0];
 
         public Composition(Compositor compositor)
         {
@@ -26,17 +23,17 @@ namespace Behavioral.Strategy
 
         public void Repair()
         {
-            Coord[] natural;
-            Coord[] stretchability;
-            Coord[] shrinkability;
+            float[] natural;
+            float[] stretchability;
+            float[] shrinkability;
             int componentCount;
             int[] breaks;
 
             // prepare the arrays with the desired component sizes
             // ...
-            natural = new Coord[0];
-            stretchability = new Coord[0];
-            shrinkability = new Coord[0];
+            natural = new float[0];
+            stretchability = new float[0];
+            shrinkability = new float[0];
             componentCount = 0;
             breaks = new int[0];
 

@@ -4,9 +4,9 @@ namespace Behavioral.Strategy
     public abstract class Compositor
     {
         public abstract int Compose(
-            Coord[] natural,
-            Coord[] stretch,
-            Coord[] shrink,
+            float[] natural,
+            float[] stretch,
+            float[] shrink,
             int componentCount,
             int lineWidth,
             int[] breaks);

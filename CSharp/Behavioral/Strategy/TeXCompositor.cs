@@ -6,7 +6,7 @@ namespace Behavioral.Strategy
         // components' size and stretchability...
         // uses all the information passed into it..."
         // (Gamma et al, 1994)
-        public override int Compose(Coord[] natural, Coord[] stretch, Coord[] shrink, int componentCount, int lineWidth, int[] breaks)
+        public override int Compose(float[] natural, float[] stretch, float[] shrink, int componentCount, int lineWidth, int[] breaks)
         {
             System.Console.WriteLine("Composing with the TeX algorithm...");
 
