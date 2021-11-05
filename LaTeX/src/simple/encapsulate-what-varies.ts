@@ -2,18 +2,18 @@
 class TaxCalculator {
 
     public calculateTax(product: Product): number {
-        // This does then calculation of tax
+        // This does the calculation of tax
         return 0;
     }
 }
 
 class FarmStand {
 
-    private cart: Array<Product>;
+    private cart: Array<Product> = [];
 
     public CalculateTotalTax(): number {
 
-        const taxCalculator = new TaxCalculator();
+        const taxCalculator = new TaxCalculator(); // Smelly...
         let totalTax = 0;
 
         for (const product of this.cart) { 
@@ -38,6 +38,6 @@ class FarmStand {
 
 
 /* Out of frame at ln 40 */
-class Product {
-    public price: number;
+type Product = {
+    price: number;
 }

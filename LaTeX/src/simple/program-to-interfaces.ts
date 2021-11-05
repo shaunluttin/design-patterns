@@ -1,43 +1,23 @@
-function makeOrangeCarrotJuice(): Array<string> {
+interface ITaxCalculator {
+    calculateTax(product: Product): number;
+}
 
-    const medley = new Array<string>();
+class FarmStandToo {
 
-    const orange: Juiceable = new Orange();
-    const carrot: Juiceable = new Carrot();
+    private cart: Array<Product> = [];
 
-    // The following is programming to Juiceable interfaces
-    for (const juicable of [orange, carrot]) {
-        const juice = juicable.squeeze();
-        medley.push(juice);
+    // We are now programming to interfaces not implementations.
+    // This supports the ... principle.
+    constructor(private taxCalculator: ITaxCalculator) { }
+
+    public CalculateTotalTax(): number {
+
+        let totalTax = 0;
+
+        for (const product of this.cart) { 
+            totalTax += this.taxCalculator.calculateTax(product);
+        }
+
+        return totalTax;
     }
-
-    return medley;
-}
-
-class Orange implements Juiceable {
-    public squeeze = () => "orange juice";
-    public peel = () => { /* peel the orange */ }
-}
-
-class Carrot implements Juiceable {
-    public squeeze = () => "carrot juice";
-    public chop = () => { /* chop the carrot */ }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Out of frame at ln 40 */
-export interface Juiceable {
-    squeeze(): string;
 }
