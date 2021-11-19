@@ -14,7 +14,8 @@ makeJuice([
     new Orange(),
     new Orange(),
     new Carrot(),
-    new Carrot()]);
+    new Carrot()]
+);
 
 
 
