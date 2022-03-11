@@ -1,6 +1,6 @@
 class Farmer {
 
-    private equipment: Array<FarmEquipment>;
+    private equipment: Array<FarmEquipment> = [];
 
     // In the formal definition of the Law of Demeter
     // a method of an object must only call members of...
@@ -20,7 +20,7 @@ class Farmer {
         let placeName = place.getName();
 
         // BAD: the Farmer now knows too much about the system.
-        placeName = place.details.locationDetails.name;
+        placeName = place.details.locationDetails().name;
     }
 
     private decreaseEnergyLevel = () => { };
@@ -42,13 +42,13 @@ class Farmer {
 class Place {
 
     public details = {
-        locationDetails: {
+        locationDetails: () => ({
             name: "foo bar baz"
-        }
+        })
     };
 
     getName(): any {
-        return this.details.locationDetails.name;
+        return this.details.locationDetails().name;
     }
 }
 

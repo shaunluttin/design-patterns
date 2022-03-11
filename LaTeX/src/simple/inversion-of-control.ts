@@ -1,6 +1,6 @@
 abstract class FertalizeGardenProgram {
 
-    private pourFertalizerOnSoil() { 
+    private pourFertalizerOnSoil() {
         // some implementation
     }
 
