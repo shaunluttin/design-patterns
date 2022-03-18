@@ -1,8 +1,7 @@
-abstract class FertalizeGardenProgram {
+abstract class FertalizeGardenFramework {
 
-    private pourFertalizerOnSoil() {
-        // some implementation
-    }
+    // this is a hook
+    protected abstract pourFertalizerOnSoil(): void;
 
     // this is a hook
     protected abstract roughUpTheSoil(): void;
@@ -14,16 +13,22 @@ abstract class FertalizeGardenProgram {
     }
 }
 
-export class LooseSoilProgram extends FertalizeGardenProgram {
+export class LooseSoilProgram extends FertalizeGardenFramework {
+    protected pourFertalizerOnSoil(): void {
+        throw new Error('Method not implemented.');
+    }
 
     protected roughUpTheSoil(): void {
-        // define loose soil routine
+        throw new Error('Method not implemented.');
     }
 }
 
-export class RockySoilProgram extends FertalizeGardenProgram {
+export class RockySoilProgram extends FertalizeGardenFramework {
+    protected pourFertalizerOnSoil(): void {
+        throw new Error('Method not implemented.');
+    }
 
     protected roughUpTheSoil(): void {
-        // define rocky soil routine
+        throw new Error('Method not implemented.');
     }
 }

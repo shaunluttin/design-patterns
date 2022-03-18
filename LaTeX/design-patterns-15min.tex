@@ -253,20 +253,18 @@
     \begin{itemize}
         \item This principle is also known as
             \begin{itemize}
-                \item "Hollywood Principle" (Sweet, 1983)
-                \item "Inversion of Control" (Johnson and Foote, 1988)
+                \item Hollywood Principle (Sweet, 1983)
+                \item Inversion of Control (Johnson and Foote, 1988)
             \end{itemize}
-        \item Inversion of Control (IoC) is about \emph{when} things happen.
-        \item It differs from Dependency Inversion,
+        \item Inversion of Control (IoC) 
             \begin{itemize}
-                \item which is about who \emph{owns} an abstraction.
-            \end{itemize}
-        \item IoC (Inversion of Control) "makes a framework different from a library" (Fowler)
-            \begin{itemize}
-                \item library: "a set of functions you can call"
-                \item framework: "insert your behavior into various places"
+                \item is about \emph{when} things happen
+                \item ``makes a framework different from a library'' (Fowler)
+                \item library: a set of functions you can call
+                \item framework: insert your behavior into various places
             \end{itemize}
         \item How? subclassing, implementing interfaces, bindings, events.
+        \item IoC differs from Dependency Inversion; DI is about who \emph{owns} an abstraction.
     \end{itemize}
 \end{frame}
 
@@ -275,14 +273,6 @@
     \begin{columns}
         \column{\dimexpr\paperwidth-40pt}
         \lstinputlisting{src/simple/inversion-of-control.ts}
-    \end{columns}
-\end{frame}
-
-\begin{frame}{Don't call us, we'll call you \ldots}
-    \vspace{0cm}
-    \begin{columns}
-        \column{\dimexpr\paperwidth-40pt}
-        \lstinputlisting{src/simple/inversion-of-control-client.ts}
     \end{columns}
 \end{frame}
 
